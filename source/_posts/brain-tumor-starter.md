@@ -3,15 +3,14 @@ title: 脑瘤相关论文笔记
 date: 2022-05-19 15:05:36
 tags:
 ---
-# 脑瘤相关论文笔记  
-
 ## 机器学习领域
 1. ***Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion*** [详细笔记](./Deep_Learning_With_Data_Enhancement_for_the_Differentiation_of_Solitary_and_Multiple_Cerebral_Glioblastoma_Lymphoma_and_Tumefactive_Demyelinating_Lesion/notes.pdf)
 
 2. Differentiating Primary Central Nervous System Lymphomas From Glioblastomas and Inflammatory Demyelinating Pseudotumor Using Relative Minimum Apparent Diffusion Coefficients   
-为1引用的文章，从标题看也是区分淋巴瘤、胶质瘤和瘤样脱髓鞘病，还没来得及看（也不知道这个相对表观弥散系数是啥意思）
+为1引用的文章，从标题看也是区分淋巴瘤、胶质瘤和瘤样脱髓鞘病
 
 3. Detection of pseudo brain tumors via stacked LSTM neural networks using MR spectroscopy signals.pdf 使用的是MRS   
+
 4. Performance of machine learning algorithms for glioma segmentation of brain MRI: a systematic literature review and meta-analysis 综述，被引量只有4
 
 5. Brain_Tumor_Segmentation_Using_Convolutional_Neural_Networks_in_MRI_Images 引用量很高，有点老  
@@ -19,7 +18,7 @@ tags:
 6. N4ITK_Improved_N3_Bias_Correction N4ITK预处理方法  
 
 ### 脑瘤分类
-* 这部分等待YYK补充
+* 待补充
 
 ### 脑瘤分割(BraTS)：一些其他的BraTS Challenge的论文  
 有3D 2D 2.5D，以使用3D CNN居多

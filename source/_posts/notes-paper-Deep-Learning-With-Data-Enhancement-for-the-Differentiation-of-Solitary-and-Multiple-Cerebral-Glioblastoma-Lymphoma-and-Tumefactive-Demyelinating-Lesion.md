@@ -1,5 +1,4 @@
 ---
-layout: notes_deep
 title: 笔记-Zhang *et al.* Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
 date: 2022-05-19 15:42:38
 tags:
@@ -36,7 +35,7 @@ https://www.frontiersin.org/articles/10.3389/fonc.2021.665891/full#supplementary
 * All data were converted into a NIFTI format to adapt to a 3D network.
 
 * The diagnosis process is presented in Figure 1. It was divided into three stages and was not an end-to-end solution.
-![Figure 1](images_for_notes/figure1.png)
+![Figure 1](figure1.png)
 ### 第一个步骤：3D U-Net
 * First, MRI was ***cropped*** to reduce the consumption of computing resources, and then the data were ***normalized*** to reduce the interference of medical image caused by uneven light.
 
@@ -55,23 +54,23 @@ Mn: enhanced data
 M: original MRI  
 n: segmented mask  
 k: enhancement coefficient  
-* In this experiment, five k values were selected, namely, −0.5, 0, 0.5, 1, and 2, to explore the best model. ![Figure 2](images_for_notes/figure2.png)
+* In this experiment, five k values were selected, namely, −0.5, 0, 0.5, 1, and 2, to explore the best model. ![Figure 2](figure2.png)
 ### 第三个步骤：3D Resnet18
 * In the third stage, the enhanced data were preprocessed similar to the first stage.
 * Resnet 18 识别 GBM, PCNSL, and TDL.
 
 * 分别尝试了 k = −0.5, 0, 0.5, 1, 2与单独使用损伤区域进行识别
 
-* ![20220519_111315_71](images_for_notes/figure3.png)
+* ![20220519_111315_71](figure3.png)
 
 ## Results
 ### 结果
 * The diagnostic performance fluctuated with the ratio of lesion to non-lesion area changed. The diagnostic performance was best when the ratio was 1.5. The AUCs of GBM, PCNSL, and TDL were 1.00 (95% confidence interval [CI]: 1.000–1.000), 0.96 (95% CI: 0.923–1.000), and 0.954 (95% CI: 0.904–1.000), respectively.
 
 * The AUC (95% confidence interval [CI]), accuracy, sensitivity, specificity, and overall accuracy are presented in Tables 2 and 3. The ROC curves are shown in Figure 4. ***When k was 0.5, the diagnostic performance was the best, and the overall accuracy was 92.4%. The AUC (95% CI) of GBM, PCNSL, and TDL were 1.00 (1.000–1.000), 0.96 (0.923–1.000), and 0.95 (0.904–1.000), respectively.*** The selected radiomics features of GBM, PCNSL, and TDL at the optimal k value are shown in Figure 5. The overall diagnostic performances of the two neuroradiologists were 52.4%.
-* ![20220519_114606_16](images_for_notes/table2_3.png)
-* ![20220519_114041_62](images_for_notes/figure4.png)
-* ![20220519_114631_98](images_for_notes/figure5.png)
+* ![20220519_114606_16](table2_3.png)
+* ![20220519_114041_62](figure4.png)
+* ![20220519_114631_98](figure5.png)
 
 * 创新点：To our knowledge, our study is the first to simultaneously differentiate the three entities with solitary and multifocal types by radiomics analysis.
 

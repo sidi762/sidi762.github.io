@@ -8,7 +8,9 @@ subtitle: 'Blog and research notes'
 description: ''
 keywords:
 author: Sidi Liang
-language: en
+language:
+- zh-cn
+- en
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -98,7 +100,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+#theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -1,633 +1,407 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN,zh-Hans,en,default">
+<html lang="zh-CN,zh-Hans,en,default" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/Sidi-Blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/Sidi-Blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/Sidi-Blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/Sidi-Blog/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/Sidi-Blog/css/main.css">
-
-
-<link rel="stylesheet" href="/Sidi-Blog/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"sidi762.github.io","root":"/Sidi-Blog/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="76x76" href="/Sidi-Blog/img/fluid.png">
+  <link rel="icon" href="/Sidi-Blog/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Sidi Liang">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Sidi&#39;s Blog">
 <meta property="og:url" content="https://sidi762.github.io/Sidi-Blog/index.html">
 <meta property="og:site_name" content="Sidi&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Sidi Liang">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Sidi&#39;s Blog</title>
 
-<link rel="canonical" href="https://sidi762.github.io/Sidi-Blog/">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>Sidi's Blog</title>
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/Sidi-Blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/Sidi-Blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/Sidi-Blog/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"sidi762.github.io","root":"/Sidi-Blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/Sidi-Blog/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/Sidi-Blog/js/utils.js" ></script>
+  <script  src="/Sidi-Blog/js/color-schema.js" ></script>
+  
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+<body>
+  
 
-</head>
+  <header>
+    
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/Sidi-Blog/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Sidi's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/Sidi-Blog/">
+      <strong>Fluid</strong>
     </a>
-      <p class="site-subtitle" itemprop="description">Blog and research notes</p>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Sidi-Blog/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Sidi-Blog/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Sidi-Blog/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Sidi-Blog/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Sidi-Blog/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/Sidi-Blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/Sidi-Blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/Sidi-Blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
 </nav>
 
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
   
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,zh-Hans,en,default">
-    <link itemprop="mainEntityOfPage" href="https://sidi762.github.io/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Sidi-Blog/images/avatar.gif">
-      <meta itemprop="name" content="Sidi Liang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+<div id="banner" class="banner" parallax=true
+     style="background: url('/Sidi-Blog/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <a href="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/" class="post-title-link" itemprop="url">论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-19 15:42:38" itemprop="dateCreated datePublished" datetime="2022-05-19T15:42:38+08:00">2022-05-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-17 16:14:28" itemprop="dateModified" datetime="2023-03-17T16:14:28+08:00">2023-03-17</time>
-              </span>
-
+            <span id="subtitle" data-typed-text="Blog and research notes"></span>
           
-
         </div>
-      </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion"><a href="#Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion" class="headerlink" title="Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion"></a>Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion</h2><h3 id="论文作者-Zhang-et-al"><a href="#论文作者-Zhang-et-al" class="headerlink" title="论文作者: Zhang et al."></a>论文作者: Zhang <em>et al.</em></h3><ul>
-<li>GBM胶质瘤, PCNSL淋巴瘤, TDL瘤样脱髓鞘损伤</li>
-</ul>
-<h2 id="结论：Deep-learning-with-data-enhancement-is-useful-for-the-accurate-identification-of-GBM-PCNSL-and-TDL-and-its-diagnostic-performance-is-better-than-that-of-the-neuroradiologists"><a href="#结论：Deep-learning-with-data-enhancement-is-useful-for-the-accurate-identification-of-GBM-PCNSL-and-TDL-and-its-diagnostic-performance-is-better-than-that-of-the-neuroradiologists" class="headerlink" title="结论：Deep learning with data enhancement is useful for the accurate identification of GBM, PCNSL, and TDL, and its diagnostic performance is better than that of the neuroradiologists."></a>结论：Deep learning with data enhancement is useful for the accurate identification of GBM, PCNSL, and TDL, and its diagnostic performance is better than that of the neuroradiologists.</h2><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
-<li>The open-ring enhancement in TDL may be an important sign that distinguishes it from other tumors</li>
-</ul>
-<h3 id="现有研究：These-advanced-MR-modalities-mainly-focused-only-on-the-enhanced-component-of-the-lesion"><a href="#现有研究：These-advanced-MR-modalities-mainly-focused-only-on-the-enhanced-component-of-the-lesion" class="headerlink" title="现有研究：These advanced MR modalities mainly focused only on the enhanced component of the lesion."></a>现有研究：These advanced MR modalities mainly focused only on the enhanced component of the lesion.</h3><ul>
-<li><p>Another study reported that diffusion-weighted imaging (DWI) could be a useful diagnostic tool to differentiate among PCNSL, GBM, and inflammatory demyelination pseudotumor (10).</p>
-</li>
-<li><p>MRS had been a valuable approach to distinguish the mimicked pathologies (11).</p>
-</li>
-</ul>
-<h3 id="现有研究：Radiomics-based-analysis-can-explore-the-whole-lesion-including-the-enhanced-and-non-enhanced-components"><a href="#现有研究：Radiomics-based-analysis-can-explore-the-whole-lesion-including-the-enhanced-and-non-enhanced-components" class="headerlink" title="现有研究：Radiomics-based analysis can explore the whole lesion including the enhanced and non-enhanced components."></a>现有研究：Radiomics-based analysis can explore the whole lesion including the enhanced and non-enhanced components.</h3><ul>
-<li>For example, the deep learning approach has been used for the differential diagnosis or grading in meningioma (12–14).</li>
-</ul>
-<h2 id="Materials-and-Methods"><a href="#Materials-and-Methods" class="headerlink" title="Materials and Methods"></a>Materials and Methods</h2><ul>
-<li><p>样本：97, 92, and 72 patients with GBM胶质瘤, PCNSL淋巴瘤, and TDL瘤样脱髓鞘损伤</p>
-</li>
-<li><p>数据集：The MRI acquisition protocols were composed of pre- and post- enhanced T1-weighted (CE-T1) images. （Supplementary File 2）<br><a target="_blank" rel="noopener" href="https://www.frontiersin.org/articles/10.3389/fonc.2021.665891/full#supplementary-material">https://www.frontiersin.org/articles/10.3389/fonc.2021.665891/full#supplementary-material</a></p>
-</li>
-<li><p>预处理（分割 Region of Interest）： All MR images in the form of digital imaging and communications in medicine (DICOM) were input to the ITK- SNAP (version 3.4.0, <a target="_blank" rel="noopener" href="http://www.itk-snap.org/">www.itk-snap.org</a>). The regions of interest (ROIs) of these three types of lesions were manually delineated on axial CE-T1 by a neuroradiologist using ITK-SNAP.</p>
-</li>
-<li><p>数据处理前请了两位10年经验神经外科医生进行了诊断，以便后续对比机器学习的性能</p>
-</li>
-</ul>
-<h3 id="Algorithm-Implementation-分为三个步骤"><a href="#Algorithm-Implementation-分为三个步骤" class="headerlink" title="Algorithm Implementation: 分为三个步骤"></a>Algorithm Implementation: 分为三个步骤</h3><ul>
-<li><p>The 261 subjects were randomly divided into a training set and a testing set.</p>
-</li>
-<li><p>All data were converted into a NIFTI format to adapt to a 3D network.</p>
-</li>
-<li><p>The diagnosis process is presented in Figure 1. It was divided into three stages and was not an end-to-end solution.<br><img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/figure1.png" alt="Figure 1"></p>
-</li>
-</ul>
-<h3 id="第一个步骤：3D-U-Net"><a href="#第一个步骤：3D-U-Net" class="headerlink" title="第一个步骤：3D U-Net"></a>第一个步骤：3D U-Net</h3><ul>
-<li><p>First, MRI was <em><strong>cropped</strong></em> to reduce the consumption of computing resources, and then the data were <em><strong>normalized</strong></em> to reduce the interference of medical image caused by uneven light.</p>
-</li>
-<li><p>The initial input network image size was reduced to <em><strong>128 × 128 × 32</strong></em> without affecting the segmentation performance.</p>
-</li>
-<li><p>entered to a convolution layer and four ResBlock downsampling modules -&gt; the features obtained after the fourth downsampling were fused with the features obtained after the third downsampling module -&gt; the fused features were entered into the upsampling ResBlock module to obtain the upsampling features. -&gt; the image size was finally restored to 128 × 128 × 32</p>
-</li>
-<li><p>Finally, the number of channels were reduced to two after the image entered a convolution layer.</p>
-</li>
-<li><p>The segmentation mask was obtained by argmax function, and the segmentation mask was restored to 512 × 512 × 24 by bilinear interpolation.</p>
-</li>
-</ul>
-<h3 id="第二个步骤：数据增强"><a href="#第二个步骤：数据增强" class="headerlink" title="第二个步骤：数据增强"></a>第二个步骤：数据增强</h3><ul>
-<li>把分割下来的病灶部分以一定倍数叠加到原图上</li>
-<li>In the second stage, the segmented lesion area was combined with the original MR image to change the pixels of the lesion area by a certain multiple, and the pixels of the non-lesion area were unchanged. The following combination equation was used:<br>Mn &#x3D; M + M • n • k<br>Mn: enhanced data<br>M: original MRI<br>n: segmented mask<br>k: enhancement coefficient  </li>
-<li>In this experiment, five k values were selected, namely, −0.5, 0, 0.5, 1, and 2, to explore the best model. <img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/figure2.png" alt="Figure 2"></li>
-</ul>
-<h3 id="第三个步骤：3D-Resnet18"><a href="#第三个步骤：3D-Resnet18" class="headerlink" title="第三个步骤：3D Resnet18"></a>第三个步骤：3D Resnet18</h3><ul>
-<li><p>In the third stage, the enhanced data were preprocessed similar to the first stage.</p>
-</li>
-<li><p>Resnet 18 识别 GBM, PCNSL, and TDL.</p>
-</li>
-<li><p>分别尝试了 k &#x3D; −0.5, 0, 0.5, 1, 2与单独使用损伤区域进行识别</p>
-</li>
-<li><p><img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/figure3.png" alt="20220519_111315_71"></p>
-</li>
-</ul>
-<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><ul>
-<li><p>The diagnostic performance fluctuated with the ratio of lesion to non-lesion area changed. The diagnostic performance was best when the ratio was 1.5. The AUCs of GBM, PCNSL, and TDL were 1.00 (95% confidence interval [CI]: 1.000–1.000), 0.96 (95% CI: 0.923–1.000), and 0.954 (95% CI: 0.904–1.000), respectively.</p>
-</li>
-<li><p>The AUC (95% confidence interval [CI]), accuracy, sensitivity, specificity, and overall accuracy are presented in Tables 2 and 3. The ROC curves are shown in Figure 4. <em><strong>When k was 0.5, the diagnostic performance was the best, and the overall accuracy was 92.4%. The AUC (95% CI) of GBM, PCNSL, and TDL were 1.00 (1.000–1.000), 0.96 (0.923–1.000), and 0.95 (0.904–1.000), respectively.</strong></em> The selected radiomics features of GBM, PCNSL, and TDL at the optimal k value are shown in Figure 5. The overall diagnostic performances of the two neuroradiologists were 52.4%.</p>
-</li>
-<li><p><img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/table2_3.png" alt="20220519_114606_16"></p>
-</li>
-<li><p><img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/figure4.png" alt="20220519_114041_62"></p>
-</li>
-<li><p><img src="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/figure5.png" alt="20220519_114631_98"></p>
-</li>
-<li><p>创新点：To our knowledge, our study is the first to simultaneously differentiate the three entities with solitary and multifocal types by radiomics analysis.</p>
-</li>
-<li><p>数据增强：准确率随病灶区域与非病灶区域占比提高先上升后下降，存在一个最优点，这时病灶区域和非病灶区域都包含了对识别有用的信息</p>
-</li>
-</ul>
-<h3 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h3><ul>
-<li><p>there may be some selection bias  </p>
-</li>
-<li><p>not end-to-end: this makes it more challenging for non-professionals to use this diagnostic method.<br>Although we tried to use the end-to-end network for training, the existing data could not support training several times larger than the existing model to achieve better diagnostic performance.<br>Therefore, more data need to be collected to support end-to-end networks.</p>
-</li>
-<li><p>this experiment only studied the differentiation of three radiologically similar lesions; neuroradiologists may consider additional diseases when making a diagnosis.<br>The existing supervised machine learning and deep learning methods can only diagnose the disease as one of the training set labels, and ignore other possible diseases.  </p>
-</li>
-<li><p>no external validation was performed.</p>
-</li>
-<li><p><em><strong>only single-mode MRI data were used in this study.</strong></em><br>Inclusion of multimodal data will provide more diagnostic information and is one of the important ways to improve diagnostic performance.<br>However, the single-model data reduce the difficulty of data collection, which makes our method more easily applicable to other diagnosis processes than other methods.</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,zh-Hans,en,default">
-    <link itemprop="mainEntityOfPage" href="https://sidi762.github.io/Sidi-Blog/2022/05/19/brain-tumor-starter/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Sidi-Blog/images/avatar.gif">
-      <meta itemprop="name" content="Sidi Liang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sidi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Sidi-Blog/2022/05/19/brain-tumor-starter/" class="post-title-link" itemprop="url">脑瘤相关论文笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-19 15:05:36" itemprop="dateCreated datePublished" datetime="2022-05-19T15:05:36+08:00">2022-05-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-17 16:14:28" itemprop="dateModified" datetime="2023-03-17T16:14:28+08:00">2023-03-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="机器学习领域"><a href="#机器学习领域" class="headerlink" title="机器学习领域"></a>机器学习领域</h2><ol>
-<li><p><em><strong>Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion</strong></em> <a href="./Deep_Learning_With_Data_Enhancement_for_the_Differentiation_of_Solitary_and_Multiple_Cerebral_Glioblastoma_Lymphoma_and_Tumefactive_Demyelinating_Lesion/notes.pdf">详细笔记</a></p>
-</li>
-<li><p>Differentiating Primary Central Nervous System Lymphomas From Glioblastomas and Inflammatory Demyelinating Pseudotumor Using Relative Minimum Apparent Diffusion Coefficients<br>为1引用的文章，从标题看也是区分淋巴瘤、胶质瘤和瘤样脱髓鞘病</p>
-</li>
-<li><p>Detection of pseudo brain tumors via stacked LSTM neural networks using MR spectroscopy signals.pdf 使用的是MRS   </p>
-</li>
-<li><p>Performance of machine learning algorithms for glioma segmentation of brain MRI: a systematic literature review and meta-analysis 综述，被引量只有4</p>
-</li>
-<li><p>Brain_Tumor_Segmentation_Using_Convolutional_Neural_Networks_in_MRI_Images 引用量很高，有点老  </p>
-</li>
-<li><p>N4ITK_Improved_N3_Bias_Correction N4ITK预处理方法</p>
-</li>
-</ol>
-<h3 id="脑瘤分类"><a href="#脑瘤分类" class="headerlink" title="脑瘤分类"></a>脑瘤分类</h3><ul>
-<li>待补充</li>
-</ul>
-<h3 id="脑瘤分割-BraTS-：一些其他的BraTS-Challenge的论文"><a href="#脑瘤分割-BraTS-：一些其他的BraTS-Challenge的论文" class="headerlink" title="脑瘤分割(BraTS)：一些其他的BraTS Challenge的论文"></a>脑瘤分割(BraTS)：一些其他的BraTS Challenge的论文</h3><p>有3D 2D 2.5D，以使用3D CNN居多</p>
-<ol>
-<li><p>Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation 被引量很高，使用3D CNN，使用CRF作为后处理  </p>
-</li>
-<li><p>Automatic Brain Tumor Segmentation Based on Cascaded Convolutional Neural Networks With Uncertainty Estimation 多个网络处理统一张图片，分别识别肿瘤，tumor core 和enhanced core 使用2.5D CNN</p>
-</li>
-<li><p>Machine Learning Based Brain Tumour Segmentation on Limited Data Using Local Textture and Abnormality 提到了预处理，统计数据集情况后发现不是所有人都有T2，因此使用T1ce 和 FLAIR  </p>
-</li>
-<li><p>A_Modified_U-Net_Convolutional_Network_Featuring_a_Nearest-neighbor_Re-sampling-based_Elastic-Transformation_for_Brain_Tissue_Characterization_and_Segmentation 使用了UNet</p>
-</li>
-</ol>
-<h3 id="脑瘤分割"><a href="#脑瘤分割" class="headerlink" title="脑瘤分割"></a>脑瘤分割</h3><ol>
-<li><p>Low-Grade Glioma Segmentation Based on CNN with Fully Connected CRF 自有数据集 上海华山医院 关注LGG的识别，发现LGG在T2 FLAIR中更有辨识度，因此使用T2 FLAIR 3DCNN+3DCRF  </p>
-</li>
-<li><p>Clinical Evaluation of a Multiparametric Deep Learning Model for Glioblastoma Segmentation Using Heterogeneous Magnetic Resonance Imaging Data From Clinical Routine 3DCNN+3DCRF 预处理：bias field correction +  T1w, T2w, and FLAIR coregisered to reference space defined by T1CE</p>
-</li>
-</ol>
-<h2 id="医学领域"><a href="#医学领域" class="headerlink" title="医学领域"></a>医学领域</h2><ol>
-<li>Cerebral tumor or pseudotumor<br>关于如何分辨脑瘤与炎性假瘤, T2似乎比较重要</li>
-</ol>
-<ul>
-<li>Demyelinating lesions can present a pseudotumoral appearance related to a significant inflammatory reaction, with hyperT2 areas appearing extensive, more than 2cm in diameter.</li>
-<li>Lesions appear in T2 isosignal or hypersignal.</li>
-<li>Some MRI signs：<ul>
-<li>no or little mass effect compared with the size of the lesion</li>
-<li>an incomplete ring enhancement, with in particular, “C-shape” enhancement of a sub-cortical lesions</li>
-<li>a peripheral border with restricted diffusion consistent with a demyelinating front and the presence of a normal vessel within the lesion traducing the venular tropism of the lesions (more visible after injection or in magnetic susceptibility imaging)</li>
-</ul>
-</li>
-</ul>
-<h3 id="TIDD"><a href="#TIDD" class="headerlink" title="TIDD"></a>TIDD</h3><ol>
-<li>Intracranial Demyelinating Pseudotumor_A Case Report and Review of the Literature</li>
-</ol>
-<ul>
-<li>Unlike astrocytoma, demyelinating pseudotumor is often accompanied with light edema and less mass effect, which can be observed on CT and MRI scans;</li>
-<li>Lesion enhancements of demyelinating pseudotumor tend to be perpendicular to the surface of the lateral ventricle;</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Sidi Liang</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/Sidi-Blog/archives/">
         
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/" target="_self">
+          论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
         </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Sidi-Blog/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/" target="_self">
+        <div>
+          Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion论文作者: Zhang et al. GBM胶质瘤, PCNSL淋巴瘤, TDL瘤样脱髓鞘损
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-19 15:42" pubdate>
+              2022-05-19
+            </time>
+          </div>
+        
+        
+        
       </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/sidi762" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sidi762" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:sidi.liang@gmail.com" title="E-Mail → mailto:sidi.liang@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/Sidi-Blog/images/cc-by.svg" alt="Creative Commons"></a>
+    </article>
   </div>
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/Sidi-Blog/2022/05/19/brain-tumor-starter/" target="_self">
+          脑瘤相关论文笔记
+        </a>
+      </h1>
 
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/Sidi-Blog/2022/05/19/brain-tumor-starter/" target="_self">
+        <div>
+          机器学习领域 Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion 详细笔记  Differentiating Primary Central
+        </div>
+      </a>
 
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-05-19 15:05" pubdate>
+              2022-05-19
+            </time>
+          </div>
+        
+        
+        
       </div>
+    </article>
+  </div>
 
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-  <div class="languages">
-    <label class="lang-select-label">
-      <i class="fa fa-language"></i>
-      <span>简体中文</span>
-      <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </label>
-    <select class="lang-select" data-canonical="">
-      
-        <option value="zh-CN" data-href="/Sidi-Blog/index.html" selected="">
-          简体中文
-        </option>
-      
-        <option value="zh-Hans" data-href="/Sidi-Blog/zh-Hans/index.html" selected="">
-          zh-Hans
-        </option>
-      
-        <option value="en" data-href="/Sidi-Blog/en/index.html" selected="">
-          English
-        </option>
-      
-    </select>
   </div>
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Sidi Liang</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
 
-        
+    
 
+    
+  </main>
 
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
+  <footer>
+    <div class="footer-inner">
   
-  <script src="/Sidi-Blog/lib/anime.min.js"></script>
-  <script src="/Sidi-Blog/lib/velocity/velocity.min.js"></script>
-  <script src="/Sidi-Blog/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/Sidi-Blog/js/utils.js"></script>
-
-<script src="/Sidi-Blog/js/motion.js"></script>
-
-
-<script src="/Sidi-Blog/js/schemes/muse.js"></script>
-
-
-<script src="/Sidi-Blog/js/next-boot.js"></script>
-
-
-
-
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
   
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
   <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/Sidi-Blog/js/events.js" ></script>
+<script  src="/Sidi-Blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
   </script>
 
 
 
 
+  
+    <script  src="/Sidi-Blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/Sidi-Blog/js/local-search.js" ></script>
 
 
 
 
 
-
-
-
-
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/Sidi-Blog/js/boot.js" ></script>
 
 
   
 
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

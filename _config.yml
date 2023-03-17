@@ -102,7 +102,8 @@ ignore:
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: next
-
+social:
+  GitHub: your-github-url
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 #deploy:

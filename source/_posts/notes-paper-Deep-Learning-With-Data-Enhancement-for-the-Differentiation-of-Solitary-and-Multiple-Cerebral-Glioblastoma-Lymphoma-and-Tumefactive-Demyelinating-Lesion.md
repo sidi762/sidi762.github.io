@@ -1,8 +1,12 @@
 ---
-title: 笔记-Zhang *et al.* Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
+title: 论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
 date: 2022-05-19 15:42:38
 tags:
 ---
+
+## Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
+### 论文作者: Zhang *et al.*
+
 * GBM胶质瘤, PCNSL淋巴瘤, TDL瘤样脱髓鞘损伤
 
 ## 结论：Deep learning with data enhancement is useful for the accurate identification of GBM, PCNSL, and TDL, and its diagnostic performance is better than that of the neuroradiologists.

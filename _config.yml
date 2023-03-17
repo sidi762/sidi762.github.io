@@ -105,8 +105,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: next
-scheme: Pisces
+theme: fluid
 social:
   GitHub: https://github.com/sidi762
 # Deployment

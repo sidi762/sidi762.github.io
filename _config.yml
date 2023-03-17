@@ -102,8 +102,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: next
+scheme: Pisces
 social:
-  GitHub: your-github-url
+  GitHub: https://github.com/sidi762
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 #deploy:

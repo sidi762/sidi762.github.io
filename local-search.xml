@@ -20,7 +20,9 @@
     
     <tags>
       
-      <tag>医学图像处理, 中文</tag>
+      <tag>医学图像处理</tag>
+      
+      <tag>中文</tag>
       
     </tags>
     
@@ -45,7 +47,9 @@
     
     <tags>
       
-      <tag>医学图像处理, English</tag>
+      <tag>医学图像处理</tag>
+      
+      <tag>English</tag>
       
     </tags>
     
@@ -70,7 +74,11 @@
     
     <tags>
       
-      <tag>医学图像处理, English, 中文</tag>
+      <tag>医学图像处理</tag>
+      
+      <tag>English</tag>
+      
+      <tag>中文</tag>
       
     </tags>
     

@@ -891,7 +891,7 @@ giscus:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/banner3.jpg
+  banner_img: /img/banner4.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -902,7 +902,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/banner3.jpg
+  banner_img: /img/banner4.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -931,7 +931,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/banner.jpg
+  banner_img: /img/banner4.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -948,7 +948,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/banner2.jpg
+  banner_img: /img/banner.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
@@ -995,7 +995,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/banner4.jpg
+  banner_img: /img/banner3.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项

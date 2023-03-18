@@ -1,8 +1,11 @@
 ---
 title: 论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
 date: 2022-05-19 15:42:38
+author: Sidi Liang
 categories: 医学图像处理
-tags: 医学图像处理, English
+tags:
+    - 医学图像处理
+    - English
 ---
 
 ## Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion

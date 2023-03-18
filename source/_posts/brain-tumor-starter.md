@@ -2,7 +2,11 @@
 title: 脑瘤相关论文笔记  
 date: 2022-05-19 15:05:36
 categories: 医学图像处理
-tags: 医学图像处理, English, 中文
+author: Sidi Liang
+tags:
+    - 医学图像处理
+    - English
+    - 中文
 ---
 ## 机器学习领域
 1. ***Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion*** [详细笔记](./Deep_Learning_With_Data_Enhancement_for_the_Differentiation_of_Solitary_and_Multiple_Cerebral_Glioblastoma_Lymphoma_and_Tumefactive_Demyelinating_Lesion/notes.pdf)

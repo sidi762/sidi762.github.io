@@ -1,8 +1,11 @@
 ---
 title: 笔记 - 在macOS上使用FreeSurfer对脑部MRI图像进行预处理
 date: 2023-03-17 20:06:02
+author: Sidi Liang
 categories: 医学图像处理
-tags: 医学图像处理, 中文
+tags:
+    - 医学图像处理
+    - 中文
 ---
 [FreeSurfer](http://freesurfer.net)是一个开源的软件套件，集成了许多知名工具（如ANTs、FSL等），被广泛用于处理和分析人脑MRI成像数据，且目前开发团队仍然在对其进行维护和更新。`recon-all` 是FreeSurfer的核心指令，用于完成FreeSurfer皮质重建的部分或全部过程。`recon-all` 大概有30多个步骤，并提供了只完成其中某些步骤的选项。我使用FreeSurfer主要是利用它前面的几个预处理步骤，包括强度归一化、映射到标准脑、以及去颅骨。  
 有一个细节，就是根据FreeSurfer的文档， ***FreeSurfer（中的许多工具）只能用于处理T1序列的图像*** 。实际操作中发现FreeSurfer的去颅骨算法是根据颜色的不同进行去颅骨，把T2的图像送进去会出很大问题。目前项目需要处理T2等其他几个序列的图像，尝试过使用FSL，效果不理想，现在仍然在寻找合适的预处理方法。（前几天查文献查到了一个叫[SynthStrip](https://pubmed.ncbi.nlm.nih.gov/35842095/)[1]的去颅骨方法，使用了神经网络，据称是可以对任意脑部图像进行去颅骨，再一查发现这个工具已经在2023年初被整合进FreeSurfer了，这几天更新FreeSurfer尝试之后会再写一篇笔记记录效果。）

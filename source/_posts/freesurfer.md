@@ -9,7 +9,11 @@ tags: 医学图像处理, 中文
 更新：用一例T2图像试了一下，SynthStrip效果确实很好！后面写个批处理把所有的图像都用这个方法处理一下看看效果，然后写篇博客记录一下！
 
 ## 安装
-在macOS上安装FreeSurfer的过程比较简单。首先在[官网](https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads)下载最新版安装包进行安装，有tar包和pkg包可选，我这里选用**pkg**安装包。软件比较大，需要提前在电脑上预留二三十个G左右。下载完成后直接双击打开，按提示进行安装。  
+在macOS上安装FreeSurfer的过程比较简单。首先在[官网](https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads)下载最新版安装包进行安装，有tar包和pkg包可选，我这里选用**pkg**安装包。软件比较大，需要提前在电脑上预留二三十个G左右。下载完成后直接双击打开，按提示进行安装。
+
+### 许可证
+使用FreeSurfer之前需要去官网申请一个许可证。这个许可证是免费的，据官方说法主要是为了统计软件使用情况。[前往这个链接](https://surfer.nmr.mgh.harvard.edu/registration.html)填写好申请表就可以申请到许可证了。最后有一个reCAPTCHA验证，如果加载不出来可能需要科学上网。获得许可证之后把许可证扔到FreeSurfer根目录下（`/Applications/freesurfer/<你安装的FreeSurfer版本,可以用Finder去看一下实际路径>`）就可以了。
+
 ### 设置环境变量
 安装完成后，需要设置一下环境变量。在终端中输入下列命令：
 ```

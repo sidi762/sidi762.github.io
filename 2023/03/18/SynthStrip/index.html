@@ -18,19 +18,22 @@
   <meta name="author" content="Sidi Liang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫SynthStrip[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。SynthStrip论文访问官网">
+    <meta name="description" content="目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫SynthStrip[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。访问官网，发现这个工具已经在 v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用SynthStrip对任意序列(T1、T2、FLAIR、T1CE等)脑部MRI图像进行去颅骨处理">
 <meta property="og:url" content="https://sidi762.github.io/Sidi-Blog/2023/03/18/SynthStrip/index.html">
 <meta property="og:site_name" content="Sidi&#39;s Blog">
-<meta property="og:description" content="目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫SynthStrip[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。SynthStrip论文访问官网">
+<meta property="og:description" content="目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫SynthStrip[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。访问官网，发现这个工具已经在 v">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sidi762.github.io/Sidi-Blog/2023/03/18/SynthStrip/img1.png">
+<meta property="og:image" content="https://sidi762.github.io/Sidi-Blog/2023/03/18/SynthStrip/img2.png">
 <meta property="article:published_time" content="2023-03-18T04:19:02.000Z">
-<meta property="article:modified_time" content="2023-03-19T14:06:18.041Z">
+<meta property="article:modified_time" content="2023-03-19T14:08:07.164Z">
 <meta property="article:author" content="Sidi Liang">
 <meta property="article:tag" content="医学图像处理">
 <meta property="article:tag" content="中文">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sidi762.github.io/Sidi-Blog/2023/03/18/SynthStrip/img1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -242,7 +245,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          971 字
+          942 字
         
       </span>
     
@@ -253,7 +256,7 @@
         
         
         
-          9 分钟
+          8 分钟
         
       </span>
     
@@ -296,9 +299,9 @@
             
               <div class="markdown-body">
                 
-                <p>目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫<a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35842095/">SynthStrip</a>[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。<br><a href="img1.png">SynthStrip论文</a><br>访问官网，发现这个工具已经在 v7.3.0 release中被整合进FreeSurfer中，且在2023-02-14这天的freesurfer release中修复了一个已知的问题。二话不说，直接下载安装dev版本的freesurfer（<a target="_blank" rel="noopener" href="https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/">官方下载地址</a>），思路就是先完成去颅骨之前的处理步骤，然后改用新版FreeSurfer软件包里集成的SynthStrip工具进行去颅骨。</p>
+                <p>目前正在做的项目需要对T1, T2, FLAIR 和T1CE四种序列的脑部MRI图像进行预处理，主要是归一化和去颅骨。然而，操作中发现FreeSurfer的去颅骨算法只适用于T1，并不适用于其他几个序列，切出来的结果非常混乱。经过一段时间搜索后发现了一个叫<a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35842095/">SynthStrip</a>[1]的去颅骨方法，应用神经网络将图像中的颅骨部分去除，可以对任意序列的脑部图像进行去颅骨。<br><img src="/Sidi-Blog/2023/03/18/SynthStrip/img1.png" srcset="/Sidi-Blog/img/loading.gif" lazyload alt="SynthStrip论文"><br>访问官网，发现这个工具已经在 v7.3.0 release中被整合进FreeSurfer中，且在2023-02-14这天的freesurfer release中修复了一个已知的问题。二话不说，直接下载安装dev版本的freesurfer（<a target="_blank" rel="noopener" href="https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/">官方下载地址</a>），思路就是先完成去颅骨之前的处理步骤，然后改用新版FreeSurfer软件包里集成的SynthStrip工具进行去颅骨。</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">recon-all -s .<span class="hljs-regexp">/subjects/</span>bratsexample -i Brats17_CBICA_ABO_1_t2.nii.gz -autorecon1 -noskullstrip<br>mri_synthstrip -i .<span class="hljs-regexp">/subjects/</span>bratsexample<span class="hljs-regexp">/mri/</span>T1.mgz -o <span class="hljs-regexp">/preprocess/</span>sub<span class="hljs-regexp">/mri/</span>strip.mgz<br>mri_convert .<span class="hljs-regexp">/subjects/</span>bratsexample<span class="hljs-regexp">/mri/</span>strip.mgz <span class="hljs-regexp">/preprocess/</span>sub<span class="hljs-regexp">/mri/</span>Brats17_CBICA_ABO_1_t2_preprocessed.nii.gz<br></code></pre></td></tr></table></figure>
-<p><a href="img2.png">T2、FLAIR、T1CE处理效果</a>  </p>
+<p><img src="/Sidi-Blog/2023/03/18/SynthStrip/img2.png" srcset="/Sidi-Blog/img/loading.gif" lazyload alt="T2、FLAIR、T1CE处理效果">  </p>
 <p>可以看到，使用SynthStrip工具可以正确去除T1、T2、FLAIR、T1CE四个序列MRI图像中的颅骨部分，解决了原有工具难以对T2、FLAIR、T1CE自动去颅骨的问题。  </p>
 <p>[1] Hoopes A, Mora JS, Dalca AV, Fischl B, Hoffmann M. SynthStrip: skull-stripping for any brain image. Neuroimage. 2022 Oct 15;260:119474. doi: 10.1016&#x2F;j.neuroimage.2022.119474. Epub 2022 Jul 13. PMID: 35842095; PMCID: PMC9465771.</p>
 

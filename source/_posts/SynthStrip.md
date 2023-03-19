@@ -18,6 +18,7 @@ mri_convert ./subjects/bratsexample/mri/strip.mgz /preprocess/sub/mri/Brats17_CB
 ```
 [T2、FLAIR、T1CE处理效果](img2.png)  
 
+可以看到，使用SynthStrip工具可以正确去除T1、T2、FLAIR、T1CE四个序列MRI图像中的颅骨部分，解决了原有工具难以对T2、FLAIR、T1CE自动去颅骨的问题。  
 
 
 [1] Hoopes A, Mora JS, Dalca AV, Fischl B, Hoffmann M. SynthStrip: skull-stripping for any brain image. Neuroimage. 2022 Oct 15;260:119474. doi: 10.1016/j.neuroimage.2022.119474. Epub 2022 Jul 13. PMID: 35842095; PMCID: PMC9465771.

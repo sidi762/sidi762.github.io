@@ -1,5 +1,5 @@
 ---
-title: SynthStrip
+title: 使用SynthStrip对任意序列(T1、T2、FLAIR、T1CE等)脑部MRI图像进行去颅骨处理
 date: 2023-03-18 12:19:02
 categories: 医学图像处理
 author: Sidi Liang

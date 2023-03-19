@@ -68,7 +68,7 @@ Autorecon Processing Stages (see -autorecon# flags above):
 25. Spherical Registration
 26. Spherical Registration, Contralateral hemisphere
 27. Map average curvature to subject
-28. Cortical Parcellation - Desikan_Killiany and Christophe (Labeling)
+28. Cortical Parcellation - Desikan-Killiany and Christophe (Labeling)
 29. Cortical Parcellation Statistics
 30. Cortical Ribbon Mask
 31. Cortical Parcellation mapping to Aseg

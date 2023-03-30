@@ -24,7 +24,7 @@ Here are some ideas to get you started:
 🔭 Interested in computer science and enjoy experimenting with coding
 😄 Currently participating in research related to machine learning with medical images
 ✈️ Enthusiastic in aviation and enjoy flight simulators a lot.
-⚡ Both a heavy user and aircraft developer of the open source flight simulator FlightGear.
+⌚ Both a heavy user and aircraft developer of the open source flight simulator FlightGear.
 👯 Develop and maintain FlightGear's official Boeing 777 aircraft model (and maybe more in the future)
 📫 The provider of the Chinese localization for FlightGear.  
 
@@ -44,7 +44,7 @@ Here are some ideas to get you started:
 
 🐟 __Github Contributions__
 
-![contri](https://activity-graph.herokuapp.com/graph?username=sidi762&bg_color=f5f5f5&color=cd5c5c&line=cd5c5c&point=FFFFFF&hide_border=true)
+![contri](https://github-readme-activity-graph.cyclic.app/graph?username=sidi762&bg_color=f5f5f5&color=cd5c5c&line=cd5c5c&point=FFFFFF&hide_border=true)
 
 🏆 __Github Achievements__
 

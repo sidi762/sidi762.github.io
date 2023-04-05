@@ -26,8 +26,8 @@ git clone https://huggingface.co/THUDM/chatglm-6b/
 pip3 install -r requirements.txt
 pip3 install gradio    
 ```
-都安装好之后，就可以准备开始运行了。
-我们先运行cli_demo.py。我这里将其复制为my_cli_demo.py，第6、7行做如下修改：
+都安装好之后，需要对代码进行一些修改才能让其在mac上顺利运行。
+这次我主要尝试运行cli_demo.py。我这里将其复制为my_cli_demo.py，第6、7行做如下修改：
 ```
 tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True)
 model = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True).half().cuda()
@@ -36,6 +36,11 @@ model = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True).ha
 ```
 tokenizer = AutoTokenizer.from_pretrained("./chatglm-6b", trust_remote_code=True)
 model = AutoModel.from_pretrained("./chatglm-6b", trust_remote_code=True).float()
+```
+
+如果是M1或者M2的mac，可以改成下面这样来启用GPU推理（前提是安装了PyTorch-Nightly，可参考[Apple 官方教程](https://developer.apple.com/metal/pytorch/)）：
+```
+model = AutoModel.from_pretrained("./chatglm-6b", trust_remote_code=True).half().to('mps')
 ```
 
 然后找到`chatglm-6b`下`modeling_chatglm.py`, 注释掉1394行至1404行：

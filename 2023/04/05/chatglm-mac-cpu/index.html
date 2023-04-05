@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/1.png">
 <meta property="og:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/3.png">
 <meta property="article:published_time" content="2023-04-05T14:55:57.000Z">
-<meta property="article:modified_time" content="2023-04-05T15:21:49.565Z">
+<meta property="article:modified_time" content="2023-04-05T15:30:42.160Z">
 <meta property="article:author" content="Sidi Liang">
 <meta property="article:tag" content="中文">
 <meta property="article:tag" content="机器学习">
@@ -246,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -257,7 +257,7 @@
         
         
         
-          10 分钟
+          12 分钟
         
       </span>
     
@@ -307,10 +307,13 @@
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">git lfs install<br>git clone https:<span class="hljs-regexp">//</span>huggingface.co<span class="hljs-regexp">/THUDM/</span>chatglm-<span class="hljs-number">6</span>b/<br></code></pre></td></tr></table></figure>
 <p>下载好之后，用pip安装依赖：</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pip3 <span class="hljs-keyword">install</span> -r requirements.txt<br>pip3 <span class="hljs-keyword">install</span> gradio    <br></code></pre></td></tr></table></figure>
-<p>都安装好之后，就可以准备开始运行了。<br>我们先运行cli_demo.py。我这里将其复制为my_cli_demo.py，第6、7行做如下修改：</p>
+<p>都安装好之后，需要对代码进行一些修改才能让其在mac上顺利运行。<br>这次我主要尝试运行cli_demo.py。我这里将其复制为my_cli_demo.py，第6、7行做如下修改：</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">tokenizer</span> = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;THUDM/chatglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>)<br><span class="hljs-attr">model</span> = AutoModel.from_pretrained(<span class="hljs-string">&quot;THUDM/chatglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>).half().cuda()<br></code></pre></td></tr></table></figure>
 <p>改为</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">tokenizer = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">AutoTokenizer</span>.</span></span>from<span class="hljs-constructor">_pretrained(<span class="hljs-string">&quot;./chatglm-6b&quot;</span>, <span class="hljs-params">trust_remote_code</span>=True)</span><br>model = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">AutoModel</span>.</span></span>from<span class="hljs-constructor">_pretrained(<span class="hljs-string">&quot;./chatglm-6b&quot;</span>, <span class="hljs-params">trust_remote_code</span>=True)</span>.<span class="hljs-built_in">float</span><span class="hljs-literal">()</span><br></code></pre></td></tr></table></figure>
+
+<p>如果是M1或者M2的mac，可以改成下面这样来启用GPU推理（前提是安装了PyTorch-Nightly，可参考<a target="_blank" rel="noopener" href="https://developer.apple.com/metal/pytorch/">Apple 官方教程</a>）：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">model</span> = AutoModel.from_pretrained(<span class="hljs-string">&quot;./chatglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>).half().to(<span class="hljs-string">&#x27;mps&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
 <p>然后找到<code>chatglm-6b</code>下<code>modeling_chatglm.py</code>, 注释掉1394行至1404行：</p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs clean">#<span class="hljs-keyword">from</span> .quantization <span class="hljs-keyword">import</span> quantize<br><br>#<span class="hljs-keyword">if</span> self.quantized:<br>#    logger.info(<span class="hljs-string">&quot;Already quantized.&quot;</span>)<br>#    return self<br><br>#self.quantized = <span class="hljs-literal">True</span><br><br>#self.config.quantization_bit = bits<br><br>#self.transformer = quantize(self.transformer, bits, empty_init=empty_init, **kwargs)<br></code></pre></td></tr></table></figure>

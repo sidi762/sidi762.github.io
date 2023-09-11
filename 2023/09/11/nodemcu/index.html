@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN,zh-Hans,en,default" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Sidi Liang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版Building the firmwareAs only the application are concerned, we can use the online firmware building service at http:&#x2F;&#x2F;nodemcu-build.com to get the firmware.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记">
+<meta property="og:url" content="https://sidi762.github.io/2023/09/11/nodemcu/index.html">
+<meta property="og:site_name" content="Sidi&#39;s Blog">
+<meta property="og:description" content="为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版Building the firmwareAs only the application are concerned, we can use the online firmware building service at http:&#x2F;&#x2F;nodemcu-build.com to get the firmware.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-11T12:06:51.000Z">
+<meta property="article:modified_time" content="2023-09-11T12:08:01.300Z">
+<meta property="article:author" content="Sidi Liang">
+<meta property="article:tag" content="中文">
+<meta property="article:tag" content="嵌入式开发">
+<meta property="article:tag" content="English">
+<meta property="article:tag" content="NodeMCU">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记 - Sidi&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"sidi762.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  <style>ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }</style>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Sidi&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner4.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Sidi Liang
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-11 20:06" pubdate>
+          2023年9月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          39 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版"><a href="#为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版" class="headerlink" title="为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版"></a><em>为了方便过审投放谷歌广告，这个笔记用英文撰写，划到下面有chatGPT提供的中文翻译版</em></h3><h3 id="Building-the-firmware"><a href="#Building-the-firmware" class="headerlink" title="Building the firmware"></a>Building the firmware</h3><p>As only the application are concerned, we can use the online firmware building service at <a target="_blank" rel="noopener" href="http://nodemcu-build.com/">http://nodemcu-build.com</a> to get the firmware. It’s quite straightforward to build the firmware on this website, by just selecting the modules to be included. However, it won’t work if too many modules are selected.</p>
+<h3 id="Flashing-the-firmware"><a href="#Flashing-the-firmware" class="headerlink" title="Flashing the firmware"></a>Flashing the firmware</h3><p>First make sure that the usb serial firmware is properly installed on the system.<br>I used this tool to flash the firmware:<br><a target="_blank" rel="noopener" href="https://github.com/marcelstoer/nodemcu-pyflasher">https://github.com/marcelstoer/nodemcu-pyflasher</a><br>baudrate: 115200 (others might also work), dual IO, …</p>
+<h2 id="Using-NodeMCU-Tool"><a href="#Using-NodeMCU-Tool" class="headerlink" title="Using NodeMCU-Tool"></a>Using NodeMCU-Tool</h2><p>NodeMCU-Tool: <a target="_blank" rel="noopener" href="https://github.com/andidittrich/NodeMCU-Tool">https://github.com/andidittrich/NodeMCU-Tool</a><br><em>Before installing NodeMCU-Tool, make sure that you have  Node.js &gt;&#x3D; 7.6 installed on your system.</em></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p><code>sudo npm install nodemcu-tool -g</code><br>This will install NodeMCU-Tool <strong>globally</strong> on your system.</p>
+<h3 id="Verifying-the-installation"><a href="#Verifying-the-installation" class="headerlink" title="Verifying the installation"></a>Verifying the installation</h3><p><code>nodemcu-tool --version</code></p>
+<h3 id="Creating-the-file-system"><a href="#Creating-the-file-system" class="headerlink" title="Creating the file system"></a>Creating the file system</h3><p><code>nodemcu-tool mkfs --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200</code><br>outputs:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">(<span class="hljs-keyword">node</span><span class="hljs-title">:13754</span>) Warning: Accessing non-existent <span class="hljs-keyword">property</span><span class="hljs-title"> </span>&#x27;padLevels&#x27; of module exports inside circular dependency<br>(Use `<span class="hljs-keyword">node</span> <span class="hljs-title">--trace-warnings</span> ...` to show where the warning was created)<br>[NodeMCU-Tool]~ Connected<br>[device]      ~ Arch: esp8266 | <span class="hljs-keyword">Version</span>: <span class="hljs-number">3.0</span>.<span class="hljs-number">0</span> | ChipID: <span class="hljs-number">0</span>x2aecbf | FlashID: <span class="hljs-number">0</span>x1640c8<br>[NodeMCU-Tool]~ Uploading <span class="hljs-string">&quot;helloworld.lua&quot;</span> &gt;&gt; <span class="hljs-string">&quot;helloworld.lua&quot;</span>...<br>[connector]   ~ Transfer-Mode: hex<br>[NodeMCU-Tool]~ File Transfer complete!<br>[NodeMCU-Tool]~ disconnecting<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="Uploading-code"><a href="#Uploading-code" class="headerlink" title="Uploading code"></a>Uploading code</h3><p><code>nodemcu-tool upload --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200 helloworld.lua </code><br>outputs:</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">(<span class="hljs-keyword">node</span><span class="hljs-title">:13754</span>) Warning: Accessing non-existent <span class="hljs-keyword">property</span><span class="hljs-title"> </span>&#x27;padLevels&#x27; of module exports inside circular dependency<br>(Use `<span class="hljs-keyword">node</span> <span class="hljs-title">--trace-warnings</span> ...` to show where the warning was created)<br>[NodeMCU-Tool]~ Connected<br>[device]      ~ Arch: esp8266 | <span class="hljs-keyword">Version</span>: <span class="hljs-number">3.0</span>.<span class="hljs-number">0</span> | ChipID: <span class="hljs-number">0</span>x2aecbf | FlashID: <span class="hljs-number">0</span>x1640c8<br>[NodeMCU-Tool]~ Uploading <span class="hljs-string">&quot;helloworld.lua&quot;</span> &gt;&gt; <span class="hljs-string">&quot;helloworld.lua&quot;</span>...<br>[connector]   ~ Transfer-Mode: hex<br>[NodeMCU-Tool]~ File Transfer complete!<br>[NodeMCU-Tool]~ disconnecting<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="Running-the-helloworld"><a href="#Running-the-helloworld" class="headerlink" title="Running the helloworld"></a>Running the helloworld</h3><p><code>nodemcu-tool run helloworld.lua --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200</code><br>outputs:</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">(node:13764) Warning: Accessing non-existent property &#x27;padLevels&#x27; of module exports inside circular dependency<br>(Use `node --trace-warnings ...` to show where the warning was created)<br>[NodeMCU-Tool]~ Connected<br>[device]      ~ Arch: esp8266 |<span class="hljs-string"> Version: 3.0.0 </span>|<span class="hljs-string"> ChipID: 0x2aecbf </span>|<span class="hljs-string"> FlashID: 0x1640c8</span><br><span class="hljs-string">[device]      ~ Running &quot;helloworld.lua&quot;</span><br><span class="hljs-string">[device]      ~ &gt;-----------------------------&gt;</span><br><span class="hljs-string">Hello World!</span><br><span class="hljs-string"></span>|<span class="hljs-string">---</span>|<br>|<span class="hljs-string"> H </span>|<br>|<span class="hljs-string"> E </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> O </span>|<br>|<span class="hljs-string"> </span>|<span class="hljs-string"> </span>|<br>|<span class="hljs-string"> W </span>|<br>|<span class="hljs-string"> O </span>|<br>|<span class="hljs-string"> R </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> D </span>|<br>|<span class="hljs-string">---</span>|<br>YEAH!!! HELLO WORLD!!!<br>String: Lorem ipsum dolor sit amet, consetetur sadipscing elitr<br>[device]      ~ &gt;-----------------------------&gt;<br>[NodeMCU-Tool]~ disconnecting<br><br></code></pre></td></tr></table></figure>
+<h3 id="To-be-continued-LUA-programming"><a href="#To-be-continued-LUA-programming" class="headerlink" title="To be continued: LUA programming"></a>To be continued: LUA programming</h3><h3 id="构建固件"><a href="#构建固件" class="headerlink" title="构建固件"></a>构建固件</h3><p>由于只关心应用程序，我们可以使用在线固件构建服务 <a target="_blank" rel="noopener" href="http://nodemcu-build.com/">http://nodemcu-build.com</a> 来获取固件。在这个网站上构建固件非常简单，只需选择要包含的模块即可。但是，如果选择了太多模块，它可能不起作用。</p>
+<h3 id="刷写固件"><a href="#刷写固件" class="headerlink" title="刷写固件"></a>刷写固件</h3><p>首先确保 USB 串行固件已正确安装在系统上。<br>我使用了这个工具来刷写固件：<br><a target="_blank" rel="noopener" href="https://github.com/marcelstoer/nodemcu-pyflasher">https://github.com/marcelstoer/nodemcu-pyflasher</a><br>波特率：115200（其他波特率也可能适用），双重 IO，…</p>
+<h2 id="使用-NodeMCU-Tool"><a href="#使用-NodeMCU-Tool" class="headerlink" title="使用 NodeMCU-Tool"></a>使用 NodeMCU-Tool</h2><p>NodeMCU-Tool：<a target="_blank" rel="noopener" href="https://github.com/andidittrich/NodeMCU-Tool">https://github.com/andidittrich/NodeMCU-Tool</a><br><em>在安装 NodeMCU-Tool 之前，请确保您的系统上已安装 Node.js &gt;&#x3D; 7.6。</em></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><code>sudo npm install nodemcu-tool -g</code><br>这将在您的系统上<strong>全局</strong>安装 NodeMCU-Tool。</p>
+<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><p><code>nodemcu-tool --version</code></p>
+<h3 id="创建文件系统"><a href="#创建文件系统" class="headerlink" title="创建文件系统"></a>创建文件系统</h3><p><code>nodemcu-tool mkfs --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200</code><br>输出：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs prolog">(node:<span class="hljs-number">13754</span>) 警告: 在循环依赖关系内部访问模块导出的不存在的属性 <span class="hljs-string">&#x27;padLevels&#x27;</span><br>(使用 <span class="hljs-string">`node --trace-warnings ...`</span> 来显示警告的创建位置)<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 已连接<br>[device]      ~ 架构：esp8266 | 版本：<span class="hljs-number">3.0</span><span class="hljs-number">.0</span> | 芯片<span class="hljs-symbol">ID</span>：<span class="hljs-number">0x2aecbf</span> | <span class="hljs-symbol">FlashID</span>：<span class="hljs-number">0x1640c8</span><br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 上传 <span class="hljs-string">&quot;helloworld.lua&quot;</span> &gt;&gt; <span class="hljs-string">&quot;helloworld.lua&quot;</span>...<br>[connector]   ~ 传输模式：hex<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 文件传输完成！<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 断开连接<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="上传代码"><a href="#上传代码" class="headerlink" title="上传代码"></a>上传代码</h3><p><code>nodemcu-tool upload --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200 helloworld.lua </code><br>输出：</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs prolog">(node:<span class="hljs-number">13754</span>) 警告: 在循环依赖关系内部访问模块导出的不存在的属性 <span class="hljs-string">&#x27;padLevels&#x27;</span><br>(使用 <span class="hljs-string">`node --trace-warnings ...`</span> 来显示警告的创建位置)<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 已连接<br>[device]      ~ 架构：esp8266 | 版本：<span class="hljs-number">3.0</span><span class="hljs-number">.0</span> | 芯片<span class="hljs-symbol">ID</span>：<span class="hljs-number">0x2aecbf</span> | <span class="hljs-symbol">FlashID</span>：<span class="hljs-number">0x1640c8</span><br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 上传 <span class="hljs-string">&quot;helloworld.lua&quot;</span> &gt;&gt; <span class="hljs-string">&quot;helloworld.lua&quot;</span>...<br>[connector]   ~ 传输模式：hex<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 文件传输完成！<br>[<span class="hljs-symbol">NodeMCU</span>-<span class="hljs-symbol">Tool</span>]~ 断开连接<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="运行-helloworld"><a href="#运行-helloworld" class="headerlink" title="运行 helloworld"></a>运行 helloworld</h3><p><code>nodemcu-tool run helloworld.lua --port=/dev/tty.wchusbserial14410 --connection-delay 300 --baud 115200</code><br>输出：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">(node:13764) 警告: 在循环依赖关系内部访问模块导出的不存在的属性 &#x27;padLevels&#x27;<br>(使用 `node --trace-warnings ...` 来显示警告的创建位置)<br>[NodeMCU-Tool]~ 已连接<br>[device]      ~ 架构：esp8266 |<span class="hljs-string"> 版本：3.0.0 </span>|<span class="hljs-string"> 芯片ID：0x2aecbf </span>|<span class="hljs-string"> FlashID：0x1640c8</span><br><span class="hljs-string">[device]      ~ 正在运行 &quot;helloworld.lua&quot;</span><br><span class="hljs-string">[device]      ~ &gt;-----------------------------&gt;</span><br><span class="hljs-string">Hello World!</span><br><span class="hljs-string"></span>|<span class="hljs-string">---</span>|<br>|<span class="hljs-string"> H </span>|<br>|<span class="hljs-string"> E </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> O </span>|<br>|<span class="hljs-string"> </span>|<span class="hljs-string"> </span>|<br>|<span class="hljs-string"> W </span>|<br>|<span class="hljs-string"> O </span>|<br>|<span class="hljs-string"> R </span>|<br>|<span class="hljs-string"> L </span>|<br>|<span class="hljs-string"> D </span>|<br>|<span class="hljs-string">---</span>|<br>YEAH!!! HELLO WORLD!!!<br>String: Lorem ipsum dolor sit amet, consetetur sadipscing elitr<br>[device]      ~ &gt;-----------------------------&gt;<br>[NodeMCU-Tool]~ 断开连接<br><br></code></pre></td></tr></table></figure>
+<h3 id="未完待续：LUA-编程"><a href="#未完待续：LUA-编程" class="headerlink" title="未完待续：LUA 编程"></a>未完待续：LUA 编程</h3>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" class="category-chain-item">嵌入式开发</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%B8%AD%E6%96%87/">#中文</a>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/">#嵌入式开发</a>
+      
+        <a href="/tags/English/">#English</a>
+      
+        <a href="/tags/NodeMCU/">#NodeMCU</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记</div>
+      <div>https://sidi762.github.io/2023/09/11/nodemcu/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Sidi Liang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+<div style="width:100%;display:flex;justify-content:center;margin-bottom:1.5rem"><ins class="adsbygoogle" style="display:flex;justify-content:center;max-width:845px;width:100%;height:90px" data-ad-client="ca-pub-1018224004040493" data-ad-slot="yyyyyy"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/04/05/chatglm-mac-cpu/" title="在mac上用cpu运行清华chatGLM-6B大模型，拥有自己的chatGPT！">
+                        <span class="hidden-mobile">在mac上用cpu运行清华chatGLM-6B大模型，拥有自己的chatGPT！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/Sidi-Blog/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1018224004040493" crossorigin="anonymous"></script>
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>在macbook上运行大语言模型第二集：使用chatglm.cpp流畅运行清华chatGLM2-6B大模型</title>
+    <link href="/2023/09/23/chatglm-cpp/"/>
+    <url>/2023/09/23/chatglm-cpp/</url>
+    
+    <content type="html"><![CDATA[<p>之前一篇介绍了如何在macOS上用cpu运行清华chatGLM大模型，但是也提到模型推理速度非常慢，并不实用。前几天我尝试了llama.cpp项目，效果很惊喜，想起来之前写的运行chatGLM大模型的博客，干脆再写一篇，说说怎么使用chatglm.cpp项目在macOS上流畅运行清华chatGLM2-6B大模型，在cpu上实现比较流畅的聊天体验。chatglm.cpp这个项目实际上脱胎于llama.cpp，这篇写chatglm.cpp主要是为了和上一篇做一个比较直接的速度上的对比，后面可能也会写一篇在mac上运行llama.cpp的博客。</p><p>首先上<a href="https://github.com/li-plus/chatglm.cpp">项目地址</a>：<a href="https://github.com/li-plus/chatglm.cpp">https://github.com/li-plus/chatglm.cpp</a></p><h3 id="下载编译chatGLM-cpp项目"><a href="#下载编译chatGLM-cpp项目" class="headerlink" title="下载编译chatGLM.cpp项目"></a>下载编译chatGLM.cpp项目</h3><p>首先clone项目到本地：<br><code>git clone --recursive https://github.com/li-plus/chatglm.cpp.git &amp;&amp; cd chatglm.cpp</code></p><p>使用cmake编译:<br><code>cmake -B build &amp;&amp; cmake --build build -j --config Release</code></p><p>Apple Silicon 用户可以开启Metal支持，这样可以使用GPU进行推理，速度会快很多：<br><code>cmake -B build -DGGML_METAL=ON &amp;&amp; cmake --build build -j</code></p><h3 id="准备chatGLM2-6B模型"><a href="#准备chatGLM2-6B模型" class="headerlink" title="准备chatGLM2-6B模型"></a>准备chatGLM2-6B模型</h3><p><code>python3 chatglm_cpp/convert.py -i THUDM/chatglm2-6b -t q8_0 -o chatglm2-ggml.bin</code><br>这时会自动下载chatglm2-6b模型，下载完成后会自动转换模型，进行8位量化，完成后会在当前目录下生成<code>chatglm2-ggml.bin</code>文件。注意这个过程需要把整个模型加载到内存里，内存占用很大，我16G内存的mbp在运行的时候出现了内存不够用进程被kill的情况，关掉了其他的一些应用才成功运行。</p><p>这里可选的模型包括：</p><ul><li>ChatGLM-6B: THUDM&#x2F;chatglm-6b, THUDM&#x2F;chatglm-6b-int8, THUDM&#x2F;chatglm-6b-int4</li><li>ChatGLM2-6B: THUDM&#x2F;chatglm2-6b, THUDM&#x2F;chatglm2-6b-int4</li><li>CodeGeeX2: THUDM&#x2F;codegeex2-6b, THUDM&#x2F;codegeex2-6b-int4</li><li>Baichuan-13B: baichuan-inc&#x2F;Baichuan-13B-Chat</li><li>Baichuan2-13B: baichuan-inc&#x2F;Baichuan2-13B-Chat<br>可选的量化模式包括：</li><li>q4_0: 4位整数量化，fp16缩放</li><li>q4_1: 4位整数量化，fp16缩放和最小值</li><li>q5_0: 5位整数量化，fp16缩放</li><li>q5_1: 5位整数量化，fp16缩放和最小值</li><li>q8_0: 8位整数量化，fp16缩放</li><li>f16: 半精度浮点数权重，不进行量化</li><li>f32: 单精度浮点数权重，不进行量化<br>根据chatGLM.cpp项目说明，对于LoRA模型，可以添加<code>-l &lt;lora_model_name_or_path&gt;</code>flag将LoRA权重合并到基本模型中。</li></ul><h3 id="开始聊天！"><a href="#开始聊天！" class="headerlink" title="开始聊天！"></a>开始聊天！</h3><p><code>./build/bin/main -m /Users/liangsidi/Desktop/chatglm2-ggml.bin -i</code> 进入交互模式，开始聊天！可以发现和之前几十秒蹦出来一个单词比，得益于chatGLM.cpp的高效实现以及模型量化，这个模型的推理速度非常快，仅用CPU也可以接近网页版chatGPT的生成速度（当然模型的规模比chatGPT小太多了）。内存占用也很低，只有几百M，可以说达到了实用水平。这下在mac上运行大模型终于不是标题党了！<br><img src="/2023/09/23/chatglm-cpp/screenshot.png" alt="运行效果"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>LLM</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>中文</tag>
+      
+      <tag>机器学习</tag>
+      
+      <tag>LLM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记</title>
     <link href="/2023/09/11/nodemcu/"/>
     <url>/2023/09/11/nodemcu/</url>
@@ -20,9 +49,9 @@
     
     <tags>
       
-      <tag>中文</tag>
-      
       <tag>嵌入式开发</tag>
+      
+      <tag>中文</tag>
       
       <tag>English</tag>
       
@@ -51,11 +80,11 @@
     
     <tags>
       
+      <tag>中文</tag>
+      
       <tag>机器学习</tag>
       
       <tag>LLM</tag>
-      
-      <tag>中文</tag>
       
     </tags>
     
@@ -80,11 +109,11 @@
     
     <tags>
       
-      <tag>中文</tag>
-      
       <tag>嵌入式开发</tag>
       
       <tag>OpenMV</tag>
+      
+      <tag>中文</tag>
       
     </tags>
     

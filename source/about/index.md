@@ -19,14 +19,16 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-🌱 A student at the University of Electronic Science and Technology of China (UESTC)  
-🤔 Majoring in Communication Engineering  
-🔭 Interested in computer science and enjoy experimenting with coding
-😄 Currently participating in research related to machine learning with medical images
-✈️ Enthusiastic in aviation and enjoy flight simulators a lot.
-⌚ Both a heavy user and aircraft developer of the open source flight simulator FlightGear.
-👯 Develop and maintain FlightGear's official Boeing 777 aircraft model (and maybe more in the future)
-📫 The provider of the Chinese localization for FlightGear.  
+I am ...
+* 📚 Student at the University of Electronic Science and Technology of China (UESTC).
+* 🎓 Pursuing a degree in Communication Engineering.
+* 💻 Passionate about computer science and enjoys experimentation in coding.
+* 🤖 Actively engaged in research focused on deep learning and medical image analysis.
+* ✈️ Enthusiast in aviation and avid user of flight simulators.
+* 🛩️ A dedicated contributor and aircraft developer for the open-source flight simulator FlightGear.
+* 👨‍💻  Maintainer of FlightGear's official Boeing 777 aircraft model.
+* 🌏 Provider of Chinese localization support for FlightGear.
+* 📫 How to reach me: sidi.liang@gmail.com or sidi762@foxmail.com
 
 ⌚ __Github Profile Details__
 
@@ -41,10 +43,6 @@ Here are some ideas to get you started:
 🔥 __Github Streaks__
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=sidi762&theme=graywhite&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=F4F4F4)](https://git.io/streak-stats)
-
-🐟 __Github Contributions__
-
-![contri](https://github-readme-activity-graph.cyclic.app/graph?username=sidi762&bg_color=f5f5f5&color=cd5c5c&line=cd5c5c&point=FFFFFF&hide_border=true)
 
 🏆 __Github Achievements__
 

@@ -62,7 +62,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sidi762.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"sidi762.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -106,7 +106,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -118,7 +118,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -130,7 +130,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -142,7 +142,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -154,7 +154,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -166,7 +166,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -238,12 +238,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/09/23/chatglm-cpp/" target="_self">
           在macbook上运行大语言模型第二集：使用chatglm.cpp流畅运行清华chatGLM2-6B大模型
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/09/23/chatglm-cpp/" target="_self">
@@ -303,12 +303,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/09/11/nodemcu/" target="_self">
           Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/09/11/nodemcu/" target="_self">
@@ -370,12 +370,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/04/05/chatglm-mac-cpu/" target="_self">
           在mac上用cpu运行清华chatGLM-6B大模型，拥有自己的chatGPT！
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/04/05/chatglm-mac-cpu/" target="_self">
@@ -435,12 +435,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/03/27/bno055/" target="_self">
           BNO055 OpenMV上手初体验：第一次用这么高级的IMU传感器
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/27/bno055/" target="_self">
@@ -500,12 +500,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/03/18/SynthStrip/" target="_self">
           使用SynthStrip对任意序列(T1、T2、FLAIR、T1CE等)脑部MRI图像进行去颅骨处理
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/18/SynthStrip/" target="_self">
@@ -563,12 +563,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2023/03/17/freesurfer/" target="_self">
           笔记 - 在macOS上使用FreeSurfer对脑部MRI图像进行预处理
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/17/freesurfer/" target="_self">
@@ -626,12 +626,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/" target="_self">
           论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/05/19/notes-paper-Deep-Learning-With-Data-Enhancement-for-the-Differentiation-of-Solitary-and-Multiple-Cerebral-Glioblastoma-Lymphoma-and-Tumefactive-Demyelinating-Lesion/" target="_self">
@@ -689,12 +689,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2022/05/19/brain-tumor-starter/" target="_self">
           脑瘤相关论文笔记
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/05/19/brain-tumor-starter/" target="_self">

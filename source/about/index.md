@@ -49,4 +49,4 @@ I am ...
 ![achievement](https://github-profile-trophy.vercel.app/?username=sidi762&margin-w=5&theme=solarized-light)
 
 
-* All photos featured on this site are my own original photography. *
+* *All photos featured on this site are my own original photography.*

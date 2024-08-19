@@ -19,13 +19,13 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-I am ...
-* 📚 Student at the University of Electronic Science and Technology of China (UESTC).
-* 🎓 Pursuing a degree in Communication Engineering.
+I am ...      
+* 📚 Graduate of the University of Electronic Science and Technology of China (UESTC) and the University of Glasgow (UoG) with a BEng, Honours of the First Class.
+* 🎓 Currently pursuing a Master’s degree in Communication Engineering with a focus on AI and Machine Learning at UESTC.
 * 💻 Passionate about computer science and enjoys experimentation in coding.
-* 🤖 Actively engaged in research focused on deep learning and medical image analysis.
+* 🤖 Actively engaged in research focused on SLAM (Simultaneous Localization and Mapping) and AI/ML/DL, with previous experience in deep learning and medical image analysis.
 * ✈️ Enthusiast in aviation and avid user of flight simulators.
-* 🛩️ A dedicated contributor and aircraft developer for the open-source flight simulator FlightGear.
+* 🛩️ Contributor and aircraft developer for the open-source flight simulator FlightGear.
 * 👨‍💻  Maintainer of FlightGear's official Boeing 777 aircraft model.
 * 🌏 Provider of Chinese localization support for FlightGear.
 * 📫 How to reach me: sidi.liang@gmail.com or sidi762@foxmail.com
@@ -47,3 +47,6 @@ I am ...
 🏆 __Github Achievements__
 
 ![achievement](https://github-profile-trophy.vercel.app/?username=sidi762&margin-w=5&theme=solarized-light)
+
+
+* All photos featured on this site are my own original photography. *

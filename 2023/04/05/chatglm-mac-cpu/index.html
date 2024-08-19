@@ -21,21 +21,21 @@
     <meta name="description" content="用mac也可以部署运行大模型！标题其实有些夸大的成分，因为用cpu进行模型推理实在是太慢了，没有什么实际意义，但是也算是一种体验大模型的方式吧。 先上一段官方介绍：  ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在mac上用cpu运行清华chatGLM-6B大模型，拥有自己的chatGPT！">
-<meta property="og:url" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/index.html">
+<meta property="og:url" content="https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/index.html">
 <meta property="og:site_name" content="Sidi&#39;s Blog">
 <meta property="og:description" content="用mac也可以部署运行大模型！标题其实有些夸大的成分，因为用cpu进行模型推理实在是太慢了，没有什么实际意义，但是也算是一种体验大模型的方式吧。 先上一段官方介绍：  ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/1.png">
-<meta property="og:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/4.png">
-<meta property="og:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/3.png">
+<meta property="og:image" content="https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/1.png">
+<meta property="og:image" content="https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/4.png">
+<meta property="og:image" content="https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/3.png">
 <meta property="article:published_time" content="2023-04-05T14:55:57.000Z">
-<meta property="article:modified_time" content="2024-06-22T13:49:15.790Z">
+<meta property="article:modified_time" content="2024-08-19T10:33:44.048Z">
 <meta property="article:author" content="Sidi Liang">
 <meta property="article:tag" content="中文">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="LLM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/1.png">
+<meta name="twitter:image" content="https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -79,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"sidi762.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"sidiexplore.xyz","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -373,7 +373,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>在mac上用cpu运行清华chatGLM-6B大模型，拥有自己的chatGPT！</div>
-      <div>https://sidi762.github.io/2023/04/05/chatglm-mac-cpu/</div>
+      <div>https://sidiexplore.xyz/2023/04/05/chatglm-mac-cpu/</div>
     </div>
     <div class="license-meta">
       
@@ -531,7 +531,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/Sidi-Blog/js/duration.js"></script> </div> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   

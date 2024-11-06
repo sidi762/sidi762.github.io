@@ -1014,6 +1014,12 @@ links:
         avatar: "/img/kery.png"
     }
     - {
+        title: "WeiHaoL",
+        intro: "WeiHaoL的博客",
+        link: "https://blog.weihao.store",
+        avatar: "/img/weihaol.jpg"
+    }
+    - {
       title: "Fluid Blog",
       intro: "主题博客",
       link: "https://hexo.fluid-dev.com/",

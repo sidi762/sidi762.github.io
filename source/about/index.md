@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-I am ...      
+I am ...
 * 📚 Graduate of the University of Electronic Science and Technology of China (UESTC) and the University of Glasgow (UoG) with a BEng, Honours of the First Class.
 * 🎓 Currently pursuing a Master’s degree in Communication Engineering with a focus on AI and Machine Learning at UESTC.
 * 💻 Passionate about computer science and enjoys experimentation in coding.
@@ -28,7 +28,11 @@ I am ...
 * 🛩️ Contributor and aircraft developer for the open-source flight simulator FlightGear.
 * 👨‍💻  Maintainer of FlightGear's official Boeing 777 aircraft model.
 * 🌏 Provider of Chinese localization support for FlightGear.
-* 📫 How to reach me: sidi.liang@gmail.com or sidi762@foxmail.com
+* 📫 How to reach me:
+  * sidi.liang@std.uestc.edu.cn
+  * sidi.liang@gmail.com
+  * sidi762@foxmail.com
+
 
 ⌚ __Github Profile Details__
 

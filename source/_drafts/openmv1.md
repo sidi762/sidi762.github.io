@@ -1,7 +1,7 @@
 ---
 title: OpenMV 巡线笔记
 categories: 嵌入式开发
-author: Sidi Liang
+author: LIANG Sidi
 tags:
     - 机器视觉
     - 嵌入式开发

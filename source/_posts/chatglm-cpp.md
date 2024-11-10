@@ -5,7 +5,7 @@ tags:
   - LLM
   - 中文
 categories: LLM
-author: Sidi Liang
+author: LIANG Sidi
 date: 2023-09-24 01:57:26
 ---
 

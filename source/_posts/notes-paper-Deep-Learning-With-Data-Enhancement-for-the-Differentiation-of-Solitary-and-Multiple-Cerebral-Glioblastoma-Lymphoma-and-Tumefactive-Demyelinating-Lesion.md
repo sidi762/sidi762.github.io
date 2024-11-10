@@ -1,7 +1,7 @@
 ---
 title: 论文阅读速记-Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion
 date: 2022-05-19 15:42:38
-author: Sidi Liang
+author: LIANG Sidi
 categories: 医学图像处理
 tags:
     - 医学图像处理
@@ -54,12 +54,12 @@ https://www.frontiersin.org/articles/10.3389/fonc.2021.665891/full#supplementary
 * The segmentation mask was obtained by argmax function, and the segmentation mask was restored to 512 × 512 × 24 by bilinear interpolation.
 ### 第二个步骤：数据增强
 * 把分割下来的病灶部分以一定倍数叠加到原图上
-* In the second stage, the segmented lesion area was combined with the original MR image to change the pixels of the lesion area by a certain multiple, and the pixels of the non-lesion area were unchanged. The following combination equation was used:  
-Mn = M + M • n • k  
-Mn: enhanced data   
-M: original MRI  
-n: segmented mask  
-k: enhancement coefficient  
+* In the second stage, the segmented lesion area was combined with the original MR image to change the pixels of the lesion area by a certain multiple, and the pixels of the non-lesion area were unchanged. The following combination equation was used:
+Mn = M + M • n • k
+Mn: enhanced data
+M: original MRI
+n: segmented mask
+k: enhancement coefficient
 * In this experiment, five k values were selected, namely, −0.5, 0, 0.5, 1, and 2, to explore the best model. ![Figure 2](figure2.png)
 ### 第三个步骤：3D Resnet18
 * In the third stage, the enhanced data were preprocessed similar to the first stage.
@@ -83,14 +83,14 @@ k: enhancement coefficient
 * 数据增强：准确率随病灶区域与非病灶区域占比提高先上升后下降，存在一个最优点，这时病灶区域和非病灶区域都包含了对识别有用的信息
 
 ### Limitations
-* there may be some selection bias  
+* there may be some selection bias
 
-* not end-to-end: this makes it more challenging for non-professionals to use this diagnostic method.  
-Although we tried to use the end-to-end network for training, the existing data could not support training several times larger than the existing model to achieve better diagnostic performance.  
+* not end-to-end: this makes it more challenging for non-professionals to use this diagnostic method.
+Although we tried to use the end-to-end network for training, the existing data could not support training several times larger than the existing model to achieve better diagnostic performance.
 Therefore, more data need to be collected to support end-to-end networks.
-* this experiment only studied the differentiation of three radiologically similar lesions; neuroradiologists may consider additional diseases when making a diagnosis.  
-The existing supervised machine learning and deep learning methods can only diagnose the disease as one of the training set labels, and ignore other possible diseases.  
+* this experiment only studied the differentiation of three radiologically similar lesions; neuroradiologists may consider additional diseases when making a diagnosis.
+The existing supervised machine learning and deep learning methods can only diagnose the disease as one of the training set labels, and ignore other possible diseases.
 * no external validation was performed.
-* ***only single-mode MRI data were used in this study.***  
-Inclusion of multimodal data will provide more diagnostic information and is one of the important ways to improve diagnostic performance.  
+* ***only single-mode MRI data were used in this study.***
+Inclusion of multimodal data will provide more diagnostic information and is one of the important ways to improve diagnostic performance.
 However, the single-model data reduce the difficulty of data collection, which makes our method more easily applicable to other diagnosis processes than other methods.

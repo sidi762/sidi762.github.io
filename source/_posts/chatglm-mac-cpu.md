@@ -6,7 +6,7 @@ tags:
   - LLM
   - 中文
 categories: LLM
-author: Sidi Liang
+author: LIANG Sidi
 ---
 用mac也可以部署运行大模型！标题其实有些夸大的成分，因为用cpu进行模型推理实在是太慢了，没有什么实际意义，但是也算是一种体验大模型的方式吧。
 
@@ -16,8 +16,8 @@ author: Sidi Liang
 ### 部署过程
 首先把chatGLM的代码clone到本地：
 ```
-git clone https://github.com/THUDM/ChatGLM-6B.git           
-cd ChatGLM-6B                        
+git clone https://github.com/THUDM/ChatGLM-6B.git
+cd ChatGLM-6B
 ```
 然后将chatGLM-6B的权重下载到本地：
 ```
@@ -27,7 +27,7 @@ git clone https://huggingface.co/THUDM/chatglm-6b/
 下载好之后，用pip安装依赖：
 ```
 pip3 install -r requirements.txt
-pip3 install gradio    
+pip3 install gradio
 ```
 都安装好之后，需要对代码进行一些修改才能让其在mac上顺利运行。
 这次我主要尝试运行cli_demo.py。我这里将其复制为my_cli_demo.py，第6、7行做如下修改：

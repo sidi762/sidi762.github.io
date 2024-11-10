@@ -6,7 +6,7 @@ tags:
   - 中文
   - English
 categories: 嵌入式开发
-author: Sidi Liang
+author: LIANG Sidi
 date: 2023-09-11 20:06:51
 ---
 

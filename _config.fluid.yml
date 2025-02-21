@@ -1002,10 +1002,10 @@ links:
   # Member item of page
   items:
     - {
-        title: "FlightGear自由飞行",
-        intro: "FlightGear中文社区",
-        link: "https://www.fgprc.org.cn",
-        avatar: "/img/fgprc.jpg"
+        title: "Problem SOLVING",
+        intro: "Annie-Fluffy的博客",
+        link: "https://annie-fluffy.github.io",
+        avatar: "/img/annie.jpg"
     }
     - {
         title: "Kery",
@@ -1018,6 +1018,12 @@ links:
         intro: "WeiHaoL的博客",
         link: "https://blog.weihao.store",
         avatar: "/img/weihaol.jpg"
+    }
+    - {
+        title: "FlightGear自由飞行",
+        intro: "FlightGear中文社区",
+        link: "https://www.fgprc.org.cn",
+        avatar: "/img/fgprc.jpg"
     }
     - {
       title: "Fluid Blog",

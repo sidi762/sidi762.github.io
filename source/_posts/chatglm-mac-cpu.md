@@ -4,7 +4,6 @@ date: 2023-04-05 22:55:57
 tags:
   - 机器学习
   - LLM
-  - 中文
 categories: LLM
 author: LIANG Sidi
 ---

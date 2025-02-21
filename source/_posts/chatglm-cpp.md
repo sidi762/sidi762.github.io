@@ -3,7 +3,6 @@ title: 在macbook上运行大语言模型第二集：使用chatglm.cpp流畅运�
 tags:
   - 机器学习
   - LLM
-  - 中文
 categories: LLM
 author: LIANG Sidi
 date: 2023-09-24 01:57:26

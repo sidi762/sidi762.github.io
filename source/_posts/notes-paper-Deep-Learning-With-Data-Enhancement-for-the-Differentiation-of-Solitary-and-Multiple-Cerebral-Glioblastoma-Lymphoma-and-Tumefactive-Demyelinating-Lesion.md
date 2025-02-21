@@ -5,7 +5,7 @@ author: LIANG Sidi
 categories: 医学图像处理
 tags:
     - 医学图像处理
-    - English
+    - Medical Image Processing
 ---
 
 ## Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion

@@ -3,8 +3,7 @@ title: Getting Started with NodeMCU on macOS - 在macOS上的NodeMCU上手笔记
 tags:
   - 嵌入式开发
   - NodeMCU
-  - 中文
-  - English
+  - Embedded Systems
 categories: 嵌入式开发
 author: LIANG Sidi
 date: 2023-09-11 20:06:51

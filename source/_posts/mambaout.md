@@ -59,12 +59,12 @@ Input dependent parameters 输入相关参数
 **SSM 的序列‑到‑序列变换 Sequence to Sequence transformation of SSM can be expressed by**
 *   **隐状态更新 (Hidden state update):**
     {% katex %}
-    h\_t = \bar{A} h\_{t-1} + \bar{B} x\_t
+    h_t = \bar{A} h_{t-1} + \bar{B} x_t
     {% endkatex %}
 
 *   **输出 (Output):**
     {% katex %}
-    y\_t = C h\_t
+    y_t = C h_t
     {% endkatex %}
 
 - 隐状态存储了所有历史信息，大小恒定，-> 意味着一定 **lossy 有损**
@@ -83,10 +83,10 @@ Input dependent parameters 输入相关参数
   二次项 / 线性项 比例：
 
   {% katex %}
-  r\_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}
+  r_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}
   {% endkatex %}
 
-  当 **L > 6D**，L² 项主导计算量 → 视为长序列
+  当 {% katex %}L > 6D{% endkatex %}，L² 项主导计算量 → 视为长序列
 
 - **阈值示例**
   - ViT‑S，D = 384 → {% katex %}\tau_L{% endkatex %} = 6 × 384 = 2304
@@ -117,10 +117,10 @@ Input dependent parameters 输入相关参数
 
 | 任务 | 框架 / 关键超参 |
 |------|----------------|
-| ImageNet‑1K 分类 | $224^2$ 输入；AdamW；300 epochs；batch 4096；lr 4e‑3；增强 = RandAug(9/0.5)+Mixup/CutMix+RE；SD $\le$ 0.6 |
-| COCO 检测/实例分割 | Mask R‑CNN 1×；$800 \text{ px} \leftrightarrow 1333 \text{ px}$；AdamW 1e‑4；batch 16；FP16 |
+| ImageNet‑1K 分类 | {% katex %}224^2{% endkatex %} 输入；AdamW；300 epochs；batch 4096；lr 4e‑3；增强 = RandAug(9/0.5)+Mixup/CutMix+RE；SD {% katex %}\leq{% endkatex %} 0.6 |
+| COCO 检测/实例分割 | Mask R‑CNN 1×；{% katex %}800 \text{ px} \leftrightarrow 1333 \text{ px}{% endkatex %}；AdamW 1e‑4；batch 16；FP16 |
 | ADE20K 语义分割 | UperNet；160 k iters；AdamW 1e‑4；batch 16；FP16 |
-| Backbone (MambaOut) | Gated CNN Blocks（无 SSM）；$7 \times 7$ DW‑Conv token mixer；MLP ratio = 8/3 |
+| Backbone (MambaOut) | Gated CNN Blocks（无 SSM）；{% katex %}7 \times 7{% endkatex %} DW‑Conv token mixer；MLP ratio = 8/3 |
 
 ---
 

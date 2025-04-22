@@ -8,7 +8,7 @@ tags:
   - Mamba
   - 中文
   - 论文笔记
-mathjax: true
+math: true
 ---
 ---
 
@@ -42,17 +42,29 @@ RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生
 ### 1.3 Mamba Token Mixing
 
 Input dependent parameters 输入相关参数
-$$(Δ, A, B, C) \rightarrow (\bar{A}, \bar{B}, C)$$
-$$\bar{A} = \exp(\Delta A)$$
-$$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
+{% katex %}
+(Δ, A, B, C) \rightarrow (\bar{A}, \bar{B}, C)
+{% endkatex %}
+
+{% katex %}
+\bar{A} = \exp(\Delta A)
+{% endkatex %}
+
+{% katex %}
+\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B
+{% endkatex %}
 
 
 **SSM 的序列‑到‑序列变换 Sequence to Sequence transformation of SSM can be expressed by**
 *   **隐状态更新 (Hidden state update):**
-    $$h\_t = \bar{A} h\_{t-1} + \bar{B} x\_t$$
+    {% katex %}
+    h\_t = \bar{A} h\_{t-1} + \bar{B} x\_t
+    {% endkatex %}
 
 *   **输出 (Output):**
-    $$y\_t = C h\_t$$
+    {% katex %}
+    y\_t = C h\_t
+    {% endkatex %}
 
 - 隐状态存储了所有历史信息，大小恒定，-> 意味着一定 **lossy 有损**
   而 **attention** 近似无损，因此理论上在短序列上性能不如attention，长序列上有优势

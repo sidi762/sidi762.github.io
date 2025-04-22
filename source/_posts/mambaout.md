@@ -61,15 +61,15 @@ $$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
 
 #### 对图像处理场景的分析
 - 作者利用 MLP ratio = 4 的 Transformer Block，FLOPs：
-  ```
-  24 D² L  +  4 D L²
-  ```
+
+  $$24D^2 L  +  4DL^2$$
+
   设输入 \(X ∈ ℝ^{L\times D}\)，token length = L，channel = D
   二次项 / 线性项 比例：
-  ```
-  r_L = (4 D L²) / (24 D² L) = L / (6 D)
-  ```
-  当 **L > 6 D**，L² 项主导计算量 → 视为长序列
+
+  $$r_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}$$
+
+  当 **L > 6D**，L² 项主导计算量 → 视为长序列
 
 - **阈值示例**
   - ViT‑S，D = 384 → τ_L = 6 × 384 = 2304

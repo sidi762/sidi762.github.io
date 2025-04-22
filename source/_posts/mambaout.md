@@ -8,6 +8,7 @@ tags:
   - Mamba
   - 中文
   - 论文笔记
+mathjax: true
 ---
 ---
 
@@ -40,7 +41,8 @@ RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生
 
 ### 1.3 Mamba Token Mixing
 
-Input dependent parameters 输入相关参数 $$ (Δ, A, B, C)  →  (\bar{A}, \bar{B}, C) $$
+Input dependent parameters 输入相关参数
+$$ (Δ, A, B, C)  →  (\bar{A}, \bar{B}, C) $$
 $$\bar{A} = \exp(\Delta A)$$
 $$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
 

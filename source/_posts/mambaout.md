@@ -35,29 +35,29 @@ RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生
 
 - **对于 Transformer**
   - 可以mask掉未来的注意力变成 causal mode
-  - ViT这样操作在imagenet分类任务中掉点*（不掉才不对吧？）*
+  - ViT这样操作在imagenet分类任务中掉点 *（不掉才不对吧？）*
 
 ---
 
 ### 1.3 Mamba Token Mixing
 
 Input dependent parameters 输入相关参数
-$$ (Δ, A, B, C)  →  (\bar{A}, \bar{B}, C) $$
+$$(Δ, A, B, C) \rightarrow (\bar{A}, \bar{B}, C)$$
 $$\bar{A} = \exp(\Delta A)$$
 $$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
 
 
 **SSM 的序列‑到‑序列变换 Sequence to Sequence transformation of SSM can be expressed by**
 *   **隐状态更新 (Hidden state update):**
-    $$h_t = \bar{A} h_{t-1} + \bar{B} x_t$$
+    $$h\_t = \bar{A} h\_{t-1} + \bar{B} x\_t$$
 
 *   **输出 (Output):**
-    $$y_t = C h_t$$
+    $$y\_t = C h\_t$$
 
 - 隐状态存储了所有历史信息，大小恒定，-> 意味着一定 **lossy 有损**
   而 **attention** 近似无损，因此理论上在短序列上性能不如attention，长序列上有优势
 
-**Limitation**：因果性 → 无法在 *fully‑visible* mode 使用
+**Limitation**：因果性 → 无法在 *fully‑visible* mode 使用
 
 #### 对图像处理场景的分析
 - 作者利用 MLP ratio = 4 的 Transformer Block，FLOPs：
@@ -67,7 +67,7 @@ $$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
   设输入 \(X ∈ ℝ^{L\times D}\)，token length = L，channel = D
   二次项 / 线性项 比例：
 
-  $$r_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}$$
+  $$r\_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}$$
 
   当 **L > 6D**，L² 项主导计算量 → 视为长序列
 
@@ -100,10 +100,10 @@ $$\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B$$
 
 | 任务 | 框架 / 关键超参 |
 |------|----------------|
-| ImageNet‑1K 分类 | 224² 输入；AdamW；300 epochs；batch 4096；lr 4e‑3；增强 = RandAug(9/0.5)+Mixup/CutMix+RE；SD ≤ 0.6 |
-| COCO 检测/实例分割 | Mask R‑CNN 1×；800 px ↔ 1333 px；AdamW 1e‑4；batch 16；FP16 |
+| ImageNet‑1K 分类 | $224^2$ 输入；AdamW；300 epochs；batch 4096；lr 4e‑3；增强 = RandAug(9/0.5)+Mixup/CutMix+RE；SD $\le$ 0.6 |
+| COCO 检测/实例分割 | Mask R‑CNN 1×；$800 \text{ px} \leftrightarrow 1333 \text{ px}$；AdamW 1e‑4；batch 16；FP16 |
 | ADE20K 语义分割 | UperNet；160 k iters；AdamW 1e‑4；batch 16；FP16 |
-| Backbone (MambaOut) | Gated CNN Blocks（无 SSM）；7×7 DW‑Conv token mixer；MLP ratio = 8/3 |
+| Backbone (MambaOut) | Gated CNN Blocks（无 SSM）；$7 \times 7$ DW‑Conv token mixer；MLP ratio = 8/3 |
 
 ---
 

@@ -75,21 +75,25 @@ Input dependent parameters 输入相关参数
 #### 对图像处理场景的分析
 - 作者利用 MLP ratio = 4 的 Transformer Block，FLOPs：
 
-  $$24D^2 L  +  4DL^2$$
+  {% katex %}
+  24D^2 L  +  4DL^2
+  {% endkatex %}
 
-  设输入 \(X ∈ ℝ^{L\times D}\)，token length = L，channel = D
+  设输入 {% katex %}X \in \mathbb{R}^{L\times D}{% endkatex %}，token length = L，channel = D
   二次项 / 线性项 比例：
 
-  $$r\_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}$$
+  {% katex %}
+  r\_L = (4DL^2) / (24D^2 L) = \frac{L}{6D}
+  {% endkatex %}
 
   当 **L > 6D**，L² 项主导计算量 → 视为长序列
 
 - **阈值示例**
-  - ViT‑S，D = 384 → τ_L = 6 × 384 = 2304
-  - ViT‑B，D = 768 → τ_L = 4608
+  - ViT‑S，D = 384 → {% katex %}\tau_L{% endkatex %} = 6 × 384 = 2304
+  - ViT‑B，D = 768 → {% katex %}\tau_L{% endkatex %} = 4608
 
 - **ImageNet 分类**
-  输入 224²，16×16 patch ⇒ 14×14 = 196 tokens ≪ 阈值 → **短序列**
+  输入 {% katex %}224^2{% endkatex %}，16×16 patch ⇒ 14×14 = 196 tokens ≪ 阈值 → **短序列**
 
 - **COCO 检测 & ADE20K 分割**
   - COCO 800×1280

@@ -22,7 +22,7 @@ Selective State Spaces
 RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生成不一样的权重）
 ```
 ---
-
+![Mamba](mambablock.png)
 ### 1.2 MambaOut (CVPR 2025)
 - **结论**：Mamba 适用于 **长序列 和 自回归** 任务
 
@@ -37,6 +37,7 @@ RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生
 - **对于 Transformer**
   - 可以mask掉未来的注意力变成 causal mode
   - ViT这样操作在imagenet分类任务中掉点 *（不掉才不对吧？）*
+  ![Transformer改成Causal](fullyvisiblevscausal.png)
 
 ---
 
@@ -71,6 +72,8 @@ Input dependent parameters 输入相关参数
   而 **attention** 近似无损，因此理论上在短序列上性能不如attention，长序列上有优势
 
 **Limitation**：因果性 → 无法在 *fully‑visible* mode 使用
+
+![对比Mamba和Attention的记忆](comparememory.png)
 
 #### 对图像处理场景的分析
 - 作者利用 MLP ratio = 4 的 Transformer Block，FLOPs：

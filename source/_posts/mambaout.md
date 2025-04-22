@@ -8,7 +8,8 @@ tags:
   - Mamba
   - 中文
   - 论文笔记
-math: true
+katex: true
+mathjax: true
 ---
 ---
 
@@ -42,17 +43,17 @@ RNN  →  Linear RNN  →  Mamba（Selective State Spaces 根据每个输入生
 ### 1.3 Mamba Token Mixing
 
 Input dependent parameters 输入相关参数
-{% katex %}
-(Δ, A, B, C) \rightarrow (\bar{A}, \bar{B}, C)
-{% endkatex %}
+* {% katex %}
+  (Δ, A, B, C) \rightarrow (\bar{A}, \bar{B}, C)
+  {% endkatex %}
 
-{% katex %}
-\bar{A} = \exp(\Delta A)
-{% endkatex %}
+* {% katex %}
+  \bar{A} = \exp(\Delta A)
+  {% endkatex %}
 
-{% katex %}
-\bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B
-{% endkatex %}
+* {% katex %}
+  \bar{B} = (\Delta A)^{-1} (\exp(\Delta A) - I) \cdot \Delta B
+  {% endkatex %}
 
 
 **SSM 的序列‑到‑序列变换 Sequence to Sequence transformation of SSM can be expressed by**

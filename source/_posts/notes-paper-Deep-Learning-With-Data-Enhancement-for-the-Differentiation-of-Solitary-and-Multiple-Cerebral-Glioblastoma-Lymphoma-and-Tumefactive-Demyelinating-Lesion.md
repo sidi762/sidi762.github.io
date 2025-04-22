@@ -6,6 +6,7 @@ categories: 医学图像处理
 tags:
     - 医学图像处理
     - Medical Image Processing
+    - 论文笔记
 ---
 
 ## Deep Learning With Data Enhancement for the Differentiation of Solitary and Multiple Cerebral Glioblastoma, Lymphoma, and Tumefactive Demyelinating Lesion

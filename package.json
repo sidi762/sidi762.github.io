@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "css": "^3.0.0",
-    "hexo": "^7.3.0",
+    "hexo": "^8.0.0",
     "hexo-all-minifier": "^0.5.7",
     "hexo-cli": "^4.3.2",
     "hexo-generator-archive": "^2.0.0",

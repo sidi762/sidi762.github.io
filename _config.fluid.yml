@@ -1002,12 +1002,6 @@ links:
   # Member item of page
   items:
     - {
-        title: "Problem SOLVING",
-        intro: "Annie-Fluffy的博客",
-        link: "https://annie-fluffy.github.io",
-        avatar: "/img/annie.jpg"
-    }
-    - {
         title: "Kery",
         intro: "Kery的技术博客，网安相关",
         link: "https://keryer.github.io",

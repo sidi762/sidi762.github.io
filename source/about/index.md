@@ -20,14 +20,14 @@ Here are some ideas to get you started:
 -->
 
 I am ...
-* 📚 Graduate of the University of Electronic Science and Technology of China (UESTC) and the University of Glasgow (UoG) with a BEng, Honours of the First Class.
-* 🎓 Currently pursuing a Master’s degree in Communication Engineering with a focus on AI and Machine Learning at UESTC.
-* 💻 Passionate about computer science and enjoys experimentation in coding.
-* 🤖 Actively engaged in research focused on SLAM (Simultaneous Localization and Mapping) and AI/ML/DL, with previous experience in deep learning and medical image analysis.
-* ✈️ Enthusiast in aviation and avid user of flight simulators.
-* 🛩️ Contributor and aircraft developer for the open-source flight simulator FlightGear.
-* 👨‍💻  Maintainer of FlightGear's official Boeing 777 aircraft model.
-* 🌏 Provider of Chinese localization support for FlightGear.
+I am ...   
+* 📚 Currently pursuing a Master’s degree with a focus on AI and Machine Learning at UESTC.
+* 🎓 Graduate of the University of Electronic Science and Technology of China (UESTC) and University of Glasgow (UoG) with a BEng, Honours of the First Class (Dual Degree).
+* 🚗 Autonomous Driving R&D Intern at **NIO**, actively engaged in training and evaluating Vision-Language Models (VLMs) and 3D Vision architectures.
+*  ⚡ Former AI Inference R&D Intern at **Moore Threads**, optimizing GPU AI inference engines using C++, ONNX, and MLIR.
+*  🔬 Solid foundation in deep learning, with prior academic research in medical image analysis and computer-aided diagnosis.
+* ✈️ Enthusiast in aviation and contributor for the open-source flight simulator FlightGear.
+* 👨‍💻 Current maintainer of FlightGear's official Boeing 777 aircraft model.
 * 📫 How to reach me:
   * sidi.liang@std.uestc.edu.cn
   * sidi.liang@gmail.com

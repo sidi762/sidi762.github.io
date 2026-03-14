@@ -27,7 +27,7 @@ I am ...
 *  ⚡ Former AI Inference R&D Intern at **Moore Threads**, optimizing GPU AI inference engines using C++, ONNX, and MLIR.
 *  🔬 Solid foundation in deep learning, with prior academic research in medical image analysis and computer-aided diagnosis.
 * ✈️ Enthusiast in aviation and contributor for the open-source flight simulator FlightGear.
-* 👨‍💻 Current maintainer of FlightGear's official Boeing 777 aircraft model.
+* 👨‍💻 Current maintainer of FlightGear's official [Boeing 777 aircraft model](https://gitlab.com/sidi762/flightgear-777).
 * 📫 How to reach me:
   * sidi.liang@std.uestc.edu.cn
   * sidi.liang@gmail.com

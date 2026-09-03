@@ -22,11 +22,10 @@ Here are some ideas to get you started:
 I am ... 
 * 📚 Currently pursuing a Master’s degree with a focus on AI and Machine Learning at UESTC.
 * 🎓 Graduate of the University of Electronic Science and Technology of China (UESTC) and University of Glasgow (UoG) with a BEng, Honours of the First Class (Dual Degree).
-* 🚗 Autonomous Driving R&D Intern at **NIO**, actively engaged in training and evaluating Vision-Language Models (VLMs) and 3D Vision architectures.
+* 🚗 Former Autonomous Driving R&D Intern at **NIO** (2026.1-2026.7), actively engaged in training and evaluating Vision-Language Models (VLMs) and 3D Vision architectures.
 *  ⚡ Former AI Inference R&D Intern at **Moore Threads**, optimizing GPU AI inference engines using C++, ONNX, and MLIR.
 *  🔬 Solid foundation in deep learning, with prior academic research in medical image analysis and computer-aided diagnosis.
-* ✈️ Enthusiast in aviation and contributor for the open-source flight simulator FlightGear.
-* 👨‍💻 Current maintainer of FlightGear's official [Boeing 777 aircraft model](https://gitlab.com/sidi762/flightgear-777).
+* ✈️ Enthusiast in aviation and contributor for the open-source flight simulator FlightGear. Current maintainer of FlightGear's official [Boeing 777 aircraft model](https://gitlab.com/sidi762/flightgear-777).
 * 📫 How to reach me:
   * sidi.liang@std.uestc.edu.cn
   * sidi.liang@gmail.com
